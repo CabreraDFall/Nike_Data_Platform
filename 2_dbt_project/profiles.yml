@@ -1,0 +1,12 @@
+nike_profile:
+  outputs:
+    dev:
+      type: postgres
+      host: postgres
+      user: "{{ env_var('DBT_ENV_CUSTOM_ENV_USER') }}"
+      password: "{{ env_var('DBT_ENV_CUSTOM_ENV_PASS') }}"
+      port: 5432
+      dbname: "{{ env_var('DBT_ENV_CUSTOM_ENV_DB') }}"
+      schema: dbt_dev
+      threads: 4
+  target: dev
