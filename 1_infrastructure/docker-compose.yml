@@ -14,11 +14,19 @@ x-airflow-common:
     AIRFLOW__DATABASE__LOAD_DEFAULT_CONNECTIONS: 'false'
     # Variables para conectar con la base de datos de NIKE
     AIRFLOW_VAR_NIKE_DB_URL: postgresql://admin:adminpassword@nike_postgres/nike_dw
+    # Configuración para dbt dentro de Airflow
+    _PIP_ADDITIONAL_REQUIREMENTS: dbt-postgres
+    DBT_PROFILES_DIR: /opt/airflow/dbt
+    DBT_ENV_CUSTOM_ENV_USER: ${POSTGRES_USER}
+    DBT_ENV_CUSTOM_ENV_PASS: ${POSTGRES_PASSWORD}
+    DBT_ENV_CUSTOM_ENV_DB: ${POSTGRES_DB}
+    DBT_ENV_CUSTOM_ENV_HOST: nike_postgres
   volumes:
     - ./dags:/opt/airflow/dags
     - ./logs:/opt/airflow/logs
     - ./plugins:/opt/airflow/plugins
     - ../0_data:/opt/airflow/0_data
+    - ../3_dbt_project:/opt/airflow/dbt
   user: "${AIRFLOW_UID:-50000}:0"
   depends_on:
     airflow_postgres:

@@ -1,6 +1,7 @@
 from airflow import DAG
 from airflow.providers.postgres.operators.postgres import PostgresOperator
 from airflow.operators.python import PythonOperator
+from airflow.operators.bash import BashOperator
 from datetime import datetime
 import os
 import psycopg2
@@ -59,3 +60,15 @@ with DAG(
         task_id='bulk_ingest_csvs',
         python_callable=bulk_ingestion_logic
     )
+
+    dbt_run = BashOperator(
+        task_id='dbt_run',
+        bash_command='cd /opt/airflow/dbt && dbt run'
+    )
+
+    dbt_test = BashOperator(
+        task_id='dbt_test',
+        bash_command='cd /opt/airflow/dbt && dbt test'
+    )
+
+    ingest_task >> dbt_run >> dbt_test
