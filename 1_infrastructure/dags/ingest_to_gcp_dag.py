@@ -26,16 +26,17 @@ with DAG(
     tags=['nike', 'gcp', 'cloud'],
 ) as dag:
 
-    # 1. Upload the entire data folder to GCS
-    # For simplicity in this demo, we can loop or use a bash command
-    upload_to_gcs = BashOperator(
+    # 1. Upload files to GCS
+    # We use a loop or a more robust way to handle multiple files in production.
+    # For this project, we'll upload the raw data directory contents.
+    upload_to_gcs = LocalFilesystemToGCSOperator(
         task_id='upload_csvs_to_gcs',
-        bash_command=f'gsutil -m cp {LOCAL_DATA_PATH}/*.csv gs://{BUCKET}/raw/'
+        src=f'{LOCAL_DATA_PATH}/*.csv',
+        dst='raw/',
+        bucket=BUCKET,
     )
 
     # 2. Load from GCS to BigQuery (Raw Layer)
-    # This could be dynamic, but for the course project, 
-    # we assume a consolidated RAW table or a few key ones.
     load_to_bq = GCSToBigQueryOperator(
         task_id='gcs_to_bq_raw',
         bucket=BUCKET,
@@ -44,6 +45,8 @@ with DAG(
         source_format='CSV',
         write_disposition='WRITE_TRUNCATE',
         autodetect=True,
+        # Ensuring we use the connection configured in Airflow
+        gcp_conn_id='google_cloud_default',
     )
 
     # 3. Trigger dbt (Cloud Target)

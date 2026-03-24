@@ -21,12 +21,19 @@ x-airflow-common:
     DBT_ENV_CUSTOM_ENV_PASS: ${POSTGRES_PASSWORD}
     DBT_ENV_CUSTOM_ENV_DB: ${POSTGRES_DB}
     DBT_ENV_CUSTOM_ENV_HOST: nike_postgres
+    # GCP Configuration (Required for Cloud Target)
+    GCP_PROJECT_ID: ${GCP_PROJECT_ID:-nike-data-platform}
+    GCP_GCS_BUCKET: ${GCP_GCS_BUCKET:-nike-data-lake}
+    GCP_BQ_DATASET: ${GCP_BQ_DATASET:-nike_dw}
+    GOOGLE_APPLICATION_CREDENTIALS: /opt/airflow/gcp_service_account.json
   volumes:
     - ./dags:/opt/airflow/dags
     - ./logs:/opt/airflow/logs
     - ./plugins:/opt/airflow/plugins
     - ../0_data:/opt/airflow/0_data
     - ../3_dbt_project:/opt/airflow/dbt
+    # Service Account Key for GCP
+    - ./gcp_service_account.json:/opt/airflow/gcp_service_account.json
   user: "${AIRFLOW_UID:-50000}:0"
   depends_on:
     airflow_postgres:

@@ -22,14 +22,22 @@ This project implements a **Modern Data Stack** entirely containerized with Dock
 
 ## 3. Project Structure
 
-* `0_data/`: Raw CSV files (not pushed to GitHub).
+* `0_data/`: Raw CSV files. Download the source dataset from [Kaggle: Nike Sales Uncleaned Dataset](https://www.kaggle.com/datasets/nayakganesh007/nike-sales-uncleaned-dataset).
 * `1_infrastructure/`: Docker (DB, Airflow, Jupyter), DAGs and environment config.
 * `2_EDA/`: Exploratory Data Analysis & DBT Readiness notebooks.
 * `3_dbt_project/`: dbt models, tests, and snapshots.
 
 ## 4. How to Run
 
-### 1. Start Infrastructure
+### 1. Pre-requisites (Cloud/GCP Target Only)
+
+If you plan to run the pipeline with the **GCP Cloud target**:
+
+1. Place your GCP Service Account JSON key in the `1_infrastructure/` folder.
+2. Rename the file to: **`gcp_service_account.json`**.
+3. Set your GCP project details in the `.env file` (see `.env.example`).
+
+### 2. Start Infrastructure
 
 Go to the `1_infrastructure` folder and run:
 
