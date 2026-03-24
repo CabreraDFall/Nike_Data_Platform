@@ -108,6 +108,24 @@ try:
         # Clean dates to avoid time-of-day artifacts in charts
         filtered_df['date_day'] = pd.to_datetime(filtered_df['date_day']).dt.date
 
+        # Temporal Trends: Historical Price Evolution
+        st.subheader("Temporal Trends: Historical Price Evolution")
+        
+        # Group data by date to establish an average trend line
+        temporal_data = filtered_df.groupby('date_day')['effective_price_usd'].mean().reset_index()
+        
+        fig_time = px.area(
+            temporal_data,
+            x='date_day',
+            y='effective_price_usd',
+            labels={'date_day': 'Date', 'effective_price_usd': 'Avg Price (USD)'},
+            template='plotly_dark',
+            height=400,
+            title="Global Average Price Evolution (USD)"
+        )
+        st.plotly_chart(fig_time, use_container_width=True)
+        st.markdown("---")
+
         # Row 1: The Core Metrics (Category & Diversity)
         st.subheader("Primary Analysis: Categories & Diversity")
         r1_col1, r1_col2 = st.columns(2)
