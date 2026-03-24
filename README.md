@@ -1,24 +1,33 @@
-# Nike Data Platform 🚀
+# Nike Data Platform: End-to-End Price Monitoring System 🚀
 
-This project is a **Modern Data Stack** implementation to process and analyze Nike's global sales data (46 CSV files).
+## 🎯 1. Problem Statement & Objective
 
-## 🛠️ Tech Stack
+Nike's global distribution involves managing thousands of SKUs across multiple markets, each with its own currency, pricing strategy, and seasonal discounts. **The core challenge** for the business was the lack of a centralized, clean, and reliable data source for global price monitoring. 
 
-- **Infrastructure:** Docker (Postgres, Airflow, pgAdmin)
-- **Orchestration:** [Apache Airflow](https://airflow.apache.org/) (LocalExecutor)
-- **Transformation:** [dbt (Postgres)](https://www.getdbt.com/)
-- **Methodology:** Kimball (Dimensional Modeling)
-- **Analysis:** PySpark & Jupyter
-- **Visualization:** Power BI
+Prior to this project, the data was fragmented across 46 weekly snapshots, containing:
+*   **Data Integrity Issues**: Over 13,000 duplicate records and 210,000+ price inconsistencies where sale prices were higher than original prices.
+*   **High Dimensional Cardinality**: Gender segments were recorded in 13 different ways (e.g., `MEN`, `MEN|WOMEN`, `BOYS`, `GIRLS`), making aggregate reporting near impossible.
 
-## 📂 Project Structure
+**The Objective**: To build an automated data platform that ingests, cleans, and transforms raw market snapshots into a validated **Dimensional Model (Star Schema)**, enabling clear visibility into price trends and discount performance worldwide.
 
-- `0_data/`: Raw CSV files (not pushed to GitHub).
-- `1_infrastructure/`: Docker (DB, Airflow, Jupyter), DAGs and environment config.
-- `2_EDA/`: Exploratory Data Analysis & DBT Readiness notebooks.
-- `3_dbt_project/`: dbt models, tests, and snapshots.
+## 🏗️ 2. Architecture & Tech Stack
 
-## 🚀 How to Run
+This project implements a **Modern Data Stack** entirely containerized with Docker:
+
+* **Infrastructure (IaC):** Docker & Docker Compose for reproducibility.
+* **Workflow Orchestration:** [Apache Airflow](https://airflow.apache.org/) (Automated ingestion from CSV to Postgres).
+* **Data Warehouse:** [PostgreSQL](https://www.postgresql.org/) (Split into `raw`, `dbt_dev` and `marts` schemas).
+* **Transformation Layer:** [dbt (Postgres)](https://www.getdbt.com/) with 14+ automated DQ tests.
+* **Graphical Discovery:** dbt Docs (built-in lineage graph for data traceability).
+
+## 📂 3. Project Structure
+
+* `0_data/`: Raw CSV files (not pushed to GitHub).
+* `1_infrastructure/`: Docker (DB, Airflow, Jupyter), DAGs and environment config.
+* `2_EDA/`: Exploratory Data Analysis & DBT Readiness notebooks.
+* `3_dbt_project/`: dbt models, tests, and snapshots.
+
+## 🚀 4. How to Run
 
 ### 1. Start Infrastructure
 
@@ -28,22 +37,39 @@ Go to the `1_infrastructure` folder and run:
 docker compose up -d
 ```
 
-### 2. Ingest Data
+### 2. Ingest & Transform (Automated)
 
-1. Access the Airflow UI at `http://localhost:8080`.
-2. Login with `airflow / airflow`.
-3. Locate the DAG **`ingest_nike_csvs_v1`** and trigger it using the **Play** button.
+* Access Airflow at `http://localhost:8080` (`airflow/airflow`).
+* Trigger the DAG **`ingest_nike_csvs_v1`**.
+* This will automatically load the CSVs AND run the dbt transformations.
 
-### 3. Verify in pgAdmin
+### 3. Graphical Lineage (dbt-docs)
 
-1. Access pgAdmin at `http://localhost:8081`.
-2. Check the `raw` schema in the `nike_dw` database to see the loaded 46 tables.
+* Generate the docs metadata: `docker compose run --rm dbt docs generate`
+* Start the docs server: `docker compose up -d dbt_docs`
+* Access the UI at: **`http://localhost:8082`** (Click the "Lineage Graph" icon).
 
-### 4. Run Transformations (dbt)
+## 🔍 5. Data Quality & Testing
 
-From the `1_infrastructure` folder, run dbt using Docker:
+This project prioritizes data reliability. We have implemented **14+ automated data tests** including:
 
-```bash
-docker compose run --rm dbt deps
-docker compose run --rm dbt run
-```
+* **Uniqueness**: Ensuring `nike_id` and `fact_key` are truly unique.
+* **Referential Integrity**: Every sale in `fct_daily_prices` must map to a valid `dim_product`.
+* **Accepted Values**: Gender segments are strictly validated against (MEN, WOMEN, UNISEX, KIDS, OTHER).
+* **Price Logic**: Validating that no effective price is null or negative.
+
+## 🧪 6. Data Warehouse Optimization
+
+To secure a high-performance analytical layer, we implemented several optimization techniques at the DWH level:
+
+### Materialization Strategy
+*   **Staging Layer**: Kept as `views` to ensure data freshness and minimize storage for intermediate cleaning steps.
+*   **Marts Layer**: Materialized as `tables`. This is a critical optimization for business users, as it pre-computes the joins and complex logic (`dim_product`, `fct_daily_prices`).
+
+### Indexing & Search Performance
+In our local Postgres DWH, we implemented **B-tree Indexing** to optimize the Star Schema:
+*   **Fact Table**: `fct_daily_prices` is indexed by `date_day`, `product_key`, and `geography_key` to accelerate time-series analysis and joins.
+*   **Dimensions**: `dim_product` and `dim_geography` use **Unique Indexes** on their surrogate keys to ensure sub-millisecond lookups.
+
+### Partitioning Strategy (Production Recommendation)
+While currently running on a single-node Postgres instance, for a production scale (e.g., Google BigQuery or AWS Redshift), the fact table would be **Partitioned by Day** (`date_day`) and **Clustered by SKU** (`product_key`). This would drastically reduce the slot-seconds cost and data scan volume for temporal price monitoring.

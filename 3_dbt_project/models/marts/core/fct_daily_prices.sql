@@ -1,5 +1,14 @@
 -- models/marts/core/fct_daily_prices.sql
 
+{{ config(
+    materialized='table',
+    indexes=[
+      {'columns': ['date_day'], 'type': 'btree'},
+      {'columns': ['product_key'], 'type': 'btree'},
+      {'columns': ['geography_key'], 'type': 'btree'}
+    ]
+) }}
+
 with staging as (
     select * from {{ ref('stg_nike_global') }}
 ),

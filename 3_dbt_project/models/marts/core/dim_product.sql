@@ -1,5 +1,12 @@
 -- models/marts/core/dim_product.sql
 
+{{ config(
+    materialized='table',
+    indexes=[
+      {'columns': ['product_key'], 'unique': True}
+    ]
+) }}
+
 with staging as (
     select * from {{ ref('stg_nike_global') }}
 ),
@@ -8,7 +15,7 @@ unique_products as (
     -- One row per SKU with the most frequent or descriptive name
     select 
         sku,
-        max(product_name) as product_name, -- Taking max to pick one Representative name
+        max(product_name) as product_name, 
         max(category) as category,
         max(subcategory) as subcategory,
         max(gender) as gender

@@ -1,5 +1,12 @@
 -- models/marts/core/dim_geography.sql
 
+{{ config(
+    materialized='table',
+    indexes=[
+      {'columns': ['geography_key'], 'unique': True}
+    ]
+) }}
+
 with staging as (
     select * from {{ ref('stg_nike_global') }}
 ),
