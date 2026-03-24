@@ -10,12 +10,12 @@ x-airflow-common:
     AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@airflow_postgres/airflow
     AIRFLOW__CORE__FERNET_KEY: ''
     AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
-    AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
+    AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'false'
     AIRFLOW__DATABASE__LOAD_DEFAULT_CONNECTIONS: 'false'
     # Variables para conectar con la base de datos de NIKE
     AIRFLOW_VAR_NIKE_DB_URL: postgresql://admin:adminpassword@nike_postgres/nike_dw
     # Configuración para dbt dentro de Airflow
-    _PIP_ADDITIONAL_REQUIREMENTS: dbt-postgres
+    _PIP_ADDITIONAL_REQUIREMENTS: dbt-postgres requests
     DBT_PROFILES_DIR: /opt/airflow/dbt
     DBT_ENV_CUSTOM_ENV_USER: ${POSTGRES_USER}
     DBT_ENV_CUSTOM_ENV_PASS: ${POSTGRES_PASSWORD}
@@ -183,7 +183,26 @@ services:
     networks:
       - nike_network
 
-  # 10. Dashboard (Exploration & Visuals)
+  # 10. Auto-trigger Pipeline on Startup
+  pipeline_trigger:
+    <<: *airflow-common
+    container_name: nike_pipeline_trigger
+    entrypoint: /bin/bash
+    command: >
+      -c "
+      echo 'Waiting for Airflow Scheduler (30s)...' && 
+      sleep 30 && 
+      airflow dags unpause ingest_nike_csvs_v1 && 
+      airflow dags trigger ingest_nike_csvs_v1 &&
+      echo 'Pipeline triggered successfully!'
+      "
+    depends_on:
+      airflow-scheduler:
+        condition: service_started
+    networks:
+      - nike_network
+
+  # 11. Dashboard (Exploration & Visuals)
   dashboard:
     image: python:3.11-slim
     container_name: nike_dashboard

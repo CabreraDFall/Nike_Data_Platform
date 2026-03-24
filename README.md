@@ -36,6 +36,7 @@ This project implements a **Modern Data Stack** entirely containerized with Dock
 * `1_infrastructure/`: Docker (DB, Airflow, Jupyter), DAGs and environment config.
 * `2_EDA/`: Exploratory Data Analysis & DBT Readiness notebooks.
 * `3_dbt_project/`: dbt models, tests, and snapshots.
+* `4_dashboard/`: [Streamlit Documentation & Screenshots](4_dashboard/README.md).
 
 ## 4. How to Run
 
@@ -69,7 +70,8 @@ docker compose up -d
 
 ### 4. Analytical Dashboard
 
-* Access the Streamlit dashboard at: **`http://localhost:8501`**
+* Access the Streamlit dashboard at: [http://localhost:8501](http://localhost:8501)
+* **Detailed Documentation**: See the [Dashboard README](4_dashboard/README.md) for full screenshots and analytical features.
 * The dashboard implements 5 high-impact analytical visualizations:
     1.  **Categorical Analysis**: Average Price by Category and Gender.
     2.  **Temporal Trends**: Historical price evolution (Area Chart).

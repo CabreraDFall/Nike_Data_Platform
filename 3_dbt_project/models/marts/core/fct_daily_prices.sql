@@ -28,8 +28,12 @@ final as (
         price_local,
         sale_price_local,
         effective_price_local,
+        price_usd,
+        sale_price_usd,
+        effective_price_usd,
         -- Metrics
         (price_local - effective_price_local) as discount_amount,
+        (price_usd - effective_price_usd) as discount_amount_usd,
         case 
             when price_local > 0 then (price_local - effective_price_local) / price_local 
             else 0 

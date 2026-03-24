@@ -20,6 +20,8 @@ renamed as (
         cast(nullif(sale_price_local, 'None') as numeric) as sale_price_local,
         record_source
     from source
+    where cast(nullif(price_local, 'None') as numeric) < 100000 
+       or price_local is null
 ),
 
 cleaned as (
@@ -51,6 +53,45 @@ deduplicated as (
         from cleaned
     ) as sub
     where rn = 1
+),
+
+exchange_rates as (
+    select * from {{ ref('currency_exchange_rates') }}
+),
+
+with_usd as (
+    select
+        d.nike_id,
+        d.snapshot_date,
+        d.country_code,
+        d.sku,
+        d.product_name,
+        d.category,
+        d.subcategory,
+        d.gender_normalized as gender,
+        d.currency,
+        d.price_local,
+        d.sale_price_local,
+        d.effective_price_local,
+        d.record_source,
+        er.to_usd_rate,
+        case 
+            when er.to_usd_rate is not null then d.price_local * er.to_usd_rate
+            when trim(upper(d.currency)) = 'USD' then d.price_local
+            else null 
+        end as price_usd,
+        case 
+            when er.to_usd_rate is not null then d.sale_price_local * er.to_usd_rate
+            when trim(upper(d.currency)) = 'USD' then d.sale_price_local
+            else null 
+        end as sale_price_usd,
+        case 
+            when er.to_usd_rate is not null then d.effective_price_local * er.to_usd_rate
+            when trim(upper(d.currency)) = 'USD' then d.effective_price_local
+            else null 
+        end as effective_price_usd
+    from deduplicated d
+    left join exchange_rates er on trim(upper(d.currency)) = trim(upper(er.currency_code))
 )
 
 select 
@@ -61,10 +102,13 @@ select
     product_name,
     category,
     subcategory,
-    gender_normalized as gender,
+    gender,
     currency,
     price_local,
     sale_price_local,
     effective_price_local,
+    price_usd,
+    sale_price_usd,
+    effective_price_usd,
     record_source
-from deduplicated
+from with_usd
