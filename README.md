@@ -28,11 +28,6 @@ This project implements a **Modern Data Stack** entirely containerized with Dock
 * **Workflow Orchestration:** [Apache Airflow](https://airflow.apache.org/) (Automated ingestion from Local -> GCS -> BigQuery).
 * **Data Warehouse:** [Google BigQuery](https://cloud.google.com/bigquery) (Production target) and PostgreSQL (Local dev).
 * **Transformation Layer:** [dbt (BigQuery)](https://www.getdbt.com/) with 14+ automated DQ tests and Star Schema design.
-
-### Architecture Diagram
-
-![Nike Data Platform Architecture](img/project_diagram.png)
-
 * **Graphical Discovery:** dbt Docs (built-in lineage graph for data traceability).
 
 ## 3. Project Structure
