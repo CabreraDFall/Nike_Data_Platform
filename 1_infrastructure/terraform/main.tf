@@ -1,4 +1,4 @@
-# 1_infrastructure/terraform/main.tf
+
 
 terraform {
   required_version = ">= 1.0"
@@ -16,7 +16,7 @@ provider "google" {
   region  = var.region
 }
 
-# Data Lake (GCS Bucket)
+
 resource "google_storage_bucket" "data-lake-bucket" {
   name                     = "${var.gcs_bucket_name}_${var.project_id}"
   location                 = var.location
@@ -39,7 +39,6 @@ resource "google_storage_bucket" "data-lake-bucket" {
   force_destroy = true
 }
 
-# Data Warehouse (BigQuery Dataset)
 resource "google_bigquery_dataset" "dataset" {
   dataset_id = var.bq_dataset_id
   location   = var.location

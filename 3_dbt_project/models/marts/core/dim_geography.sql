@@ -1,5 +1,3 @@
--- models/marts/core/dim_geography.sql
-
 {{ config(
     materialized='table',
     indexes=[

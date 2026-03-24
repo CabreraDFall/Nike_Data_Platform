@@ -1,4 +1,3 @@
--- models/marts/core/fct_daily_prices.sql
 
 {{ config(
     materialized='table',
@@ -31,7 +30,7 @@ final as (
         price_usd,
         sale_price_usd,
         effective_price_usd,
-        -- Metrics
+        
         (price_local - effective_price_local) as discount_amount,
         (price_usd - effective_price_usd) as discount_amount_usd,
         case 

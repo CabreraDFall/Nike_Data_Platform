@@ -1,4 +1,4 @@
--- models/staging/stg_nike_global.sql
+
 
 with source as (
     select * from {{ source('raw_nike', 'global_nike') }}
@@ -6,7 +6,7 @@ with source as (
 
 renamed as (
     select
-        -- Create a unique ID for each record based on its primary key
+       
         {{ dbt_utils.generate_surrogate_key(['snapshot_date', 'country_code', 'sku']) }} as nike_id,
         cast(snapshot_date as date) as snapshot_date,
         country_code,
@@ -27,10 +27,10 @@ renamed as (
 cleaned as (
     select
         *,
-        -- Price correction logic: Use the minimum of price and sale_price (to handle the 210k errors detected)
+        
         least(price_local, coalesce(sale_price_local, price_local)) as effective_price_local,
         
-        -- Gender normalization logic
+      
         case 
             when gender_segment = 'MEN' then 'MEN'
             when gender_segment = 'WOMEN' then 'WOMEN'
@@ -42,7 +42,7 @@ cleaned as (
 ),
 
 deduplicated as (
-    -- Remove the 13k duplicates by keeping the most recent or highest quality record
+    
     select * from (
         select 
             *,

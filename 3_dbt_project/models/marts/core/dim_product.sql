@@ -1,4 +1,3 @@
--- models/marts/core/dim_product.sql
 
 {{ config(
     materialized='table',
@@ -12,7 +11,7 @@ with staging as (
 ),
 
 unique_products as (
-    -- One row per SKU with the most frequent or descriptive name
+
     select 
         sku,
         max(product_name) as product_name, 

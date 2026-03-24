@@ -8,7 +8,7 @@ import psycopg2
 import requests
 import csv
 
-# Configuración
+
 DATA_FOLDER = "/opt/airflow/0_data"
 NIKE_CONN_STRING = "postgresql://admin:adminpassword@nike_postgres/nike_dw"
 DBT_FOLDER = "/opt/airflow/dbt"
@@ -28,8 +28,7 @@ def fetch_live_exchange_rates():
         writer = csv.writer(f)
         writer.writerow(["currency_code", "to_usd_rate"])
         for currency, rate in rates.items():
-            # La API devuelve el valor de 1 USD en la moneda local. 
-            # Para convertir local a USD, multiplicamos por (1 / rate).
+            
             to_usd_rate = 1.0 / rate if rate > 0 else 0
             writer.writerow([currency, to_usd_rate])
             
@@ -45,19 +44,19 @@ def ingest_csv_to_postgres(file_name):
     conn = psycopg2.connect(NIKE_CONN_STRING)
     cur = conn.cursor()
     
-    # Crear esquema y tabla
+    
     cur.execute("CREATE SCHEMA IF NOT EXISTS raw;")
     cur.execute(f'DROP TABLE IF EXISTS raw."{table_name}" CASCADE;')
         
-    # Leemos la primera línea para los nombres de las columnas
+    
     with open(full_path, 'r', encoding='utf-8') as f:
         header = f.readline().strip().split(',')
         columns = ", ".join([f'"{col}" TEXT' for col in header])
         cur.execute(f'CREATE TABLE raw."{table_name}" ({columns});')
     
-    # Carga masiva
+    
     with open(full_path, 'r', encoding='utf-8') as f:
-        next(f) # Saltamos cabecera
+        next(f) 
         cur.copy_expert(f'COPY raw."{table_name}" FROM STDIN WITH CSV', f)
     
     conn.commit()
@@ -78,8 +77,6 @@ with DAG(
     tags=['nike', 'ingestion'],
 ) as dag:
 
-    # En Airflow 2, lo más sencillo es un PythonOperator que lo haga todo en bucle 
-    # o generar tareas dinámicas. Para 46 archivos, un bucle es muy seguro.
     
     ingest_task = PythonOperator(
         task_id='bulk_ingest_csvs',

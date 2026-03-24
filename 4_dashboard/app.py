@@ -4,14 +4,14 @@ import psycopg2
 import plotly.express as px
 import os
 
-# Page configuration
+
 st.set_page_config(
     page_title="Nike Global Price Monitor",
     page_icon="None",
     layout="wide"
 )
 
-# Database connection
+
 def get_connection():
     return psycopg2.connect(
         host=os.getenv("POSTGRES_HOST", "localhost"),
@@ -23,7 +23,7 @@ def get_connection():
 st.title("Nike Global Price Monitoring Dashboard")
 st.markdown("---")
 
-# Data loading
+
 @st.cache_data
 def load_data():
     conn = get_connection()
@@ -53,14 +53,14 @@ def load_data():
 try:
     df = load_data()
 
-    # Sidebar filters
+    
     st.sidebar.header("Filters")
     selected_category = st.sidebar.multiselect("Category", df['category'].unique(), default=df['category'].unique())
     selected_gender = st.sidebar.multiselect("Gender", df['gender'].unique(), default=df['gender'].unique())
 
     filtered_df = df[df['category'].isin(selected_category) & df['gender'].isin(selected_gender)]
 
-    # Metrics
+    
     col1, col2, col3 = st.columns(3)
     col1.metric("Total Records", f"{len(filtered_df):,}")
     col2.metric("Avg Global Price (USD)", f"${filtered_df['effective_price_usd'].mean():.2f}")
@@ -68,34 +68,34 @@ try:
 
     st.markdown("---")
 
-    # 5 Key Business Insights
+    
     st.subheader("5 Key Data Insights (Normalized to USD)")
     ins_col1, ins_col2 = st.columns(2)
 
     with ins_col1:
-        # Insight 1: Most Expensive Category
+        
         max_cat = filtered_df.groupby('category')['effective_price_usd'].mean().idxmax()
         st.write(f"1. **Category Leader**: `{max_cat}` is the most expensive category globally on average.")
         
-        # Insight 2: Gender Dominance
+        
         gender_counts = filtered_df['gender'].value_counts()
         top_gender = gender_counts.index[0]
         st.write(f"2. **Inventory Focus**: `{top_gender}` has the highest product count ({gender_counts.iloc[0]:,} SKUs).")
         
-        # Insight 3: Global Price Volatility
+        
         volatility = filtered_df['effective_price_usd'].std()
         st.write(f"3. **Price Volatility**: Standard deviation is `${volatility:.2f}`, showing significant price variety in USD.")
 
     with ins_col2:
-        # Insight 4: Market Reach
+        
         countries = filtered_df['country_code'].nunique()
         st.write(f"4. **Global Reach**: Monitoring active pricing across `{countries}` distinct country markets.")
         
-        # Insight 5: Average Discount Context
+        
         avg_disc = filtered_df['discount_amount_usd'].mean()
         st.write(f"5. **Discount Impact**: The average monetary discount per item is `${avg_disc:.2f}` USD.")
 
-        # Insight 6: Price Trend
+        
         latest_date = filtered_df['date_day'].max()
         avg_price_latest = filtered_df[filtered_df['date_day'] == latest_date]['effective_price_usd'].mean()
         st.write(f"6. **Latest Trend**: Global average is `${avg_price_latest:.2f}` (as of `{latest_date}`).")
@@ -105,13 +105,13 @@ try:
     if filtered_df.empty:
         st.warning("No data matches the current filters. Please verify that the data has been ingested and transformations have run.")
     else:
-        # Clean dates to avoid time-of-day artifacts in charts
+        
         filtered_df['date_day'] = pd.to_datetime(filtered_df['date_day']).dt.date
 
-        # Temporal Trends: Historical Price Evolution
+        
         st.subheader("Temporal Trends: Historical Price Evolution")
         
-        # Group data by date to establish an average trend line
+        
         temporal_data = filtered_df.groupby('date_day')['effective_price_usd'].mean().reset_index()
         
         fig_time = px.area(
@@ -128,7 +128,7 @@ try:
         st.plotly_chart(fig_time, use_container_width=True)
         st.markdown("---")
 
-        # Row 1: The Core Metrics (Category & Diversity)
+        
         st.subheader("Primary Analysis: Categories & Diversity")
         r1_col1, r1_col2 = st.columns(2)
 
@@ -161,13 +161,13 @@ try:
 
         st.markdown("---")
 
-        # Row 2: Distribution and Ranking
+        
         st.subheader("Deep Dive: Distribution & Rankings")
         r2_col1, r2_col2 = st.columns(2)
 
         with r2_col1:
             st.markdown("#### Price Distribution (Box Plot) by Category (USD)")
-            # Sample data for performance in box plots if needed
+            
             fig_box = px.box(
                 filtered_df,
                 x='category',
@@ -196,7 +196,7 @@ try:
 
         st.markdown("---")
 
-        # Row 3: Market Comparison
+        
         st.subheader("Market Comparison (Normalized to USD)")
         st.markdown("#### Average Price by Country Market (USD)")
         fig_market = px.bar(
