@@ -2,7 +2,7 @@ nike_profile:
   outputs:
     dev:
       type: postgres
-      host: postgres
+      host: "{{ env_var('DBT_ENV_CUSTOM_ENV_HOST', 'localhost') }}"
       user: "{{ env_var('DBT_ENV_CUSTOM_ENV_USER') }}"
       password: "{{ env_var('DBT_ENV_CUSTOM_ENV_PASS') }}"
       port: 5432

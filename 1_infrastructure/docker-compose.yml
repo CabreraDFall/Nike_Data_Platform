@@ -133,6 +133,22 @@ services:
     networks:
       - nike_network
 
+  # 8. dbt Transformations
+  dbt:
+    image: ghcr.io/dbt-labs/dbt-postgres:1.8.2
+    container_name: nike_dbt
+    working_dir: /usr/app
+    volumes:
+      - ../3_dbt_project:/usr/app
+      - ../3_dbt_project/profiles.yml:/root/.dbt/profiles.yml
+    environment:
+      DBT_ENV_CUSTOM_ENV_USER: ${POSTGRES_USER}
+      DBT_ENV_CUSTOM_ENV_PASS: ${POSTGRES_PASSWORD}
+      DBT_ENV_CUSTOM_ENV_DB: ${POSTGRES_DB}
+      DBT_ENV_CUSTOM_ENV_HOST: nike_postgres
+    networks:
+      - nike_network
+
 networks:
   nike_network:
     driver: bridge

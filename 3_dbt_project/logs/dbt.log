@@ -185,3 +185,1346 @@ https://docs.getdbt.com/docs/configure-your-profile
 [0m13:39:41.227752 [debug] [MainThread]: Connection 'debug' was properly closed.
 [0m13:39:41.228393 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b50f666fd10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b50f6678210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b50fa40c710>]}
 [0m13:39:41.229053 [debug] [MainThread]: Flushing usage events
+[0m10:50:37.508226 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021A4546D2B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021A4320C050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021A4779BD90>]}
+
+
+============================== 10:50:37.513044 | 13e8ecc9-4ea9-447c-850f-9b4cc8c9d202 ==============================
+[0m10:50:37.513044 [info ] [MainThread]: Running with dbt=1.11.7
+[0m10:50:37.513492 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Sr. Fall\\Desktop\\Data Git\\nikeProject\\3_dbt_project', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt deps', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\Sr. Fall\\Desktop\\Data Git\\nikeProject\\3_dbt_project\\logs'}
+[0m10:50:37.673929 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '13e8ecc9-4ea9-447c-850f-9b4cc8c9d202', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021A45B108A0>]}
+[0m10:50:37.706904 [debug] [MainThread]: Set downloads directory='C:\Users\SRF36A~1.FAL\AppData\Local\Temp\dbt-downloads-bdjc61a_'
+[0m10:50:37.707442 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m10:50:38.089849 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m10:50:38.091556 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m10:50:38.372190 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m10:50:38.383076 [info ] [MainThread]: Updating lock file in file path: C:\Users\Sr. Fall\Desktop\Data Git\nikeProject\3_dbt_project/package-lock.yml
+[0m10:50:38.392757 [debug] [MainThread]: Set downloads directory='C:\Users\SRF36A~1.FAL\AppData\Local\Temp\dbt-downloads-145y6mpn'
+[0m10:50:38.398600 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m10:50:39.234475 [info ] [MainThread]: Installed from version 1.1.1
+[0m10:50:39.234876 [info ] [MainThread]: Updated version available: 1.3.3
+[0m10:50:39.235218 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '13e8ecc9-4ea9-447c-850f-9b4cc8c9d202', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021A479CB680>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021A479CB570>]}
+[0m10:50:39.235543 [info ] [MainThread]: 
+[0m10:50:39.235816 [info ] [MainThread]: Updates available for packages: ['dbt-labs/dbt_utils']                 
+Update your versions in packages.yml, then run dbt deps
+[0m10:50:39.237004 [debug] [MainThread]: Command `dbt deps` succeeded at 10:50:39.236905 after 1.82 seconds
+[0m10:50:39.237278 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021A4797F950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021A45424410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021A46042B70>]}
+[0m10:50:39.237566 [debug] [MainThread]: Flushing usage events
+[0m10:50:39.900429 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:51:05.708883 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174973ED2B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001749518C050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001749971FD90>]}
+
+
+============================== 10:51:05.713026 | c1c8e266-d801-4253-a3ff-c5fd443cacab ==============================
+[0m10:51:05.713026 [info ] [MainThread]: Running with dbt=1.11.7
+[0m10:51:05.713499 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\Sr. Fall\\Desktop\\Data Git\\nikeProject\\3_dbt_project', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\Sr. Fall\\Desktop\\Data Git\\nikeProject\\3_dbt_project\\logs'}
+[0m10:51:05.730294 [info ] [MainThread]: dbt version: 1.11.7
+[0m10:51:05.730721 [info ] [MainThread]: python version: 3.13.7
+[0m10:51:05.730983 [info ] [MainThread]: python path: C:\Users\Sr. Fall\Desktop\Data Git\nikeProject\venv\Scripts\python.exe
+[0m10:51:05.731250 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m10:51:05.911846 [info ] [MainThread]: Using profiles dir at C:\Users\Sr. Fall\Desktop\Data Git\nikeProject\3_dbt_project
+[0m10:51:05.912292 [info ] [MainThread]: Using profiles.yml file at C:\Users\Sr. Fall\Desktop\Data Git\nikeProject\3_dbt_project\profiles.yml
+[0m10:51:05.912563 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Sr. Fall\Desktop\Data Git\nikeProject\3_dbt_project\dbt_project.yml
+[0m10:51:05.913577 [info ] [MainThread]: adapter type: postgres
+[0m10:51:05.913859 [info ] [MainThread]: adapter version: 1.10.0
+[0m10:51:06.006238 [info ] [MainThread]: Configuration:
+[0m10:51:06.006736 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m10:51:06.007013 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m10:51:06.007271 [info ] [MainThread]: Required dependencies:
+[0m10:51:06.007572 [debug] [MainThread]: Executing "git --help"
+[0m10:51:06.036131 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m10:51:06.036568 [debug] [MainThread]: STDERR: "b''"
+[0m10:51:06.036906 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m10:51:06.037268 [info ] [MainThread]: Connection:
+[0m10:51:06.037559 [info ] [MainThread]:   host: localhost
+[0m10:51:06.037853 [info ] [MainThread]:   port: 5432
+[0m10:51:06.038098 [info ] [MainThread]:   user: admin
+[0m10:51:06.038329 [info ] [MainThread]:   database: nike_dw
+[0m10:51:06.038559 [info ] [MainThread]:   schema: dbt_dev
+[0m10:51:06.038787 [info ] [MainThread]:   connect_timeout: 10
+[0m10:51:06.039017 [info ] [MainThread]:   role: None
+[0m10:51:06.039240 [info ] [MainThread]:   search_path: None
+[0m10:51:06.039468 [info ] [MainThread]:   keepalives_idle: 0
+[0m10:51:06.039695 [info ] [MainThread]:   sslmode: None
+[0m10:51:06.039930 [info ] [MainThread]:   sslcert: None
+[0m10:51:06.040155 [info ] [MainThread]:   sslkey: None
+[0m10:51:06.040379 [info ] [MainThread]:   sslrootcert: None
+[0m10:51:06.040602 [info ] [MainThread]:   application_name: dbt
+[0m10:51:06.040826 [info ] [MainThread]:   retries: 1
+[0m10:51:06.041214 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m10:51:06.389190 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m10:51:08.457538 [debug] [MainThread]: Using postgres connection "debug"
+[0m10:51:08.457904 [debug] [MainThread]: On debug: select 1 as id
+[0m10:51:08.458150 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:51:08.524422 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m10:51:08.524873 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m10:51:08.525177 [debug] [MainThread]: On debug: No close available on handle
+[0m10:51:08.525430 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m10:51:08.525717 [info ] [MainThread]: [31m1 check failed:[0m
+[0m10:51:08.526051 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  'utf-8' codec can't decode byte 0xf3 in position 85: invalid continuation byte
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m10:51:08.526709 [debug] [MainThread]: Command `dbt debug` failed at 10:51:08.526613 after 2.91 seconds
+[0m10:51:08.526977 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m10:51:08.527244 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174985A6D70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174980FD370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017499792AD0>]}
+[0m10:51:08.527573 [debug] [MainThread]: Flushing usage events
+[0m10:51:09.172574 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m09:56:14.704657 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76ab0705f190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76ab0705f410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76ab0705e550>]}
+
+
+============================== 09:56:14.711882 | 5923eb79-5cd4-4001-8409-0cfe0b93df2b ==============================
+[0m09:56:14.711882 [info ] [MainThread]: Running with dbt=1.8.3
+[0m09:56:14.713188 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/usr/app', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/usr/app/logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt deps', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m09:56:14.800248 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '5923eb79-5cd4-4001-8409-0cfe0b93df2b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76ab06f38d90>]}
+[0m09:56:15.077940 [error] [MainThread]: Encountered an error:
+Runtime Error
+  The packages.yml file in this project is malformed. Please double check
+  the contents of this file and fix any errors before retrying.
+  
+  You can find more information on the syntax for this file here:
+  https://docs.getdbt.com/docs/package-management
+  
+  Validator Error:
+  {'name': 'dbt_utils', 'package': 'dbt-labs/dbt_utils', 'version': '1.1.1', 'unrendered': {'name': 'dbt_utils', 'package': 'dbt-labs/dbt_utils', 'version': '1.1.1'}} is not valid under any of the given schemas
+  
+[0m09:56:15.079999 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_wall_clock_time": 0.45015532, "process_user_time": 1.135066, "process_kernel_time": 0.272578, "process_mem_max_rss": "94068", "process_in_blocks": "1496", "process_out_blocks": "1128", "command_success": false}
+[0m09:56:15.080893 [debug] [MainThread]: Command `dbt deps` failed at 09:56:15.080800 after 0.45 seconds
+[0m09:56:15.081764 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76ab070684d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76ab070aac90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76ab06e00f50>]}
+[0m09:56:15.082587 [debug] [MainThread]: Flushing usage events
+[0m09:57:19.562819 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7502690df850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x750269129410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x750269129a10>]}
+
+
+============================== 09:57:19.568765 | 82939e36-0940-47b0-835f-1b06e6301926 ==============================
+[0m09:57:19.568765 [info ] [MainThread]: Running with dbt=1.8.3
+[0m09:57:19.569703 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/usr/app', 'debug': 'False', 'warn_error': 'None', 'log_path': '/usr/app/logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt deps', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m09:57:19.650506 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '82939e36-0940-47b0-835f-1b06e6301926', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7502690dc190>]}
+[0m09:57:19.671022 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-iccukd4f'
+[0m09:57:19.672205 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m09:57:19.754528 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m09:57:19.755839 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m09:57:19.823510 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m09:57:19.838978 [info ] [MainThread]: Updating lock file in file path: /usr/app/package-lock.yml
+[0m09:57:19.851179 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-k6ef4dir'
+[0m09:57:19.854840 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m09:57:23.415843 [info ] [MainThread]: Installed from version 1.3.0
+[0m09:57:23.416756 [info ] [MainThread]: Updated version available: 1.3.3
+[0m09:57:23.417715 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '82939e36-0940-47b0-835f-1b06e6301926', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x750268fbfa90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7502691299d0>]}
+[0m09:57:23.418451 [info ] [MainThread]: 
+[0m09:57:23.419124 [info ] [MainThread]: Updates available for packages: ['dbt-labs/dbt_utils']                 
+Update your versions in packages.yml, then run dbt deps
+[0m09:57:23.421012 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 3.907968, "process_user_time": 1.292901, "process_kernel_time": 0.592232, "process_mem_max_rss": "94844", "process_in_blocks": "32", "process_out_blocks": "1304"}
+[0m09:57:23.421976 [debug] [MainThread]: Command `dbt deps` succeeded at 09:57:23.421869 after 3.91 seconds
+[0m09:57:23.422631 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x750269137390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75026cfd4550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x750269129a90>]}
+[0m09:57:23.423250 [debug] [MainThread]: Flushing usage events
+[0m09:58:12.204524 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b4f5a433310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b4f5a474dd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b4f5a433090>]}
+
+
+============================== 09:58:12.210497 | 6f355803-d99a-4c94-8cd3-e9cae895763c ==============================
+[0m09:58:12.210497 [info ] [MainThread]: Running with dbt=1.8.3
+[0m09:58:12.211349 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/usr/app', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': '/usr/app/logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt run', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m09:58:12.395771 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '6f355803-d99a-4c94-8cd3-e9cae895763c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b4f5a370a90>]}
+[0m09:58:12.438171 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '6f355803-d99a-4c94-8cd3-e9cae895763c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b4f5c0456d0>]}
+[0m09:58:12.440376 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m09:58:12.472301 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m09:58:12.477510 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m09:58:12.478353 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '6f355803-d99a-4c94-8cd3-e9cae895763c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b4f5b10d150>]}
+[0m09:58:14.153006 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `tests` config has been renamed to `data_tests`. Please see
+https://docs.getdbt.com/docs/build/data-tests#new-data_tests-syntax for more
+information.
+[0m09:58:14.154311 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '6f355803-d99a-4c94-8cd3-e9cae895763c', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b4f5a5892d0>]}
+[0m09:58:14.367081 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.nike_project.marts
+[0m09:58:14.376530 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '6f355803-d99a-4c94-8cd3-e9cae895763c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b4f589644d0>]}
+[0m09:58:14.480566 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '6f355803-d99a-4c94-8cd3-e9cae895763c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b4f58a55290>]}
+[0m09:58:14.481478 [info ] [MainThread]: Found 2 models, 4 data tests, 1 source, 531 macros
+[0m09:58:14.482502 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6f355803-d99a-4c94-8cd3-e9cae895763c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b4f58a2e350>]}
+[0m09:58:14.484809 [info ] [MainThread]: 
+[0m09:58:14.486068 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m09:58:14.490336 [debug] [ThreadPool]: Acquiring new postgres connection 'list_nike_dw'
+[0m09:58:14.558634 [debug] [ThreadPool]: Using postgres connection "list_nike_dw"
+[0m09:58:14.559519 [debug] [ThreadPool]: On list_nike_dw: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "nike_profile", "target_name": "dev", "connection_name": "list_nike_dw"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m09:58:14.560161 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:58:14.590070 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.0 seconds
+[0m09:58:14.591895 [debug] [ThreadPool]: On list_nike_dw: Close
+[0m09:58:14.593387 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_nike_dw, now create_nike_dw_dbt_dev)
+[0m09:58:14.594231 [debug] [ThreadPool]: Creating schema "database: "nike_dw"
+schema: "dbt_dev"
+"
+[0m09:58:14.598893 [debug] [ThreadPool]: Using postgres connection "create_nike_dw_dbt_dev"
+[0m09:58:14.599848 [debug] [ThreadPool]: On create_nike_dw_dbt_dev: BEGIN
+[0m09:58:14.600491 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m09:58:14.619654 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m09:58:14.620556 [debug] [ThreadPool]: Using postgres connection "create_nike_dw_dbt_dev"
+[0m09:58:14.621256 [debug] [ThreadPool]: On create_nike_dw_dbt_dev: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "nike_profile", "target_name": "dev", "connection_name": "create_nike_dw_dbt_dev"} */
+create schema if not exists "dbt_dev"
+[0m09:58:14.646021 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.0 seconds
+[0m09:58:14.647630 [debug] [ThreadPool]: On create_nike_dw_dbt_dev: COMMIT
+[0m09:58:14.648389 [debug] [ThreadPool]: Using postgres connection "create_nike_dw_dbt_dev"
+[0m09:58:14.649007 [debug] [ThreadPool]: On create_nike_dw_dbt_dev: COMMIT
+[0m09:58:14.657900 [debug] [ThreadPool]: SQL status: COMMIT in 0.0 seconds
+[0m09:58:14.658906 [debug] [ThreadPool]: On create_nike_dw_dbt_dev: Close
+[0m09:58:14.660851 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_nike_dw_dbt_dev, now list_nike_dw_dbt_dev)
+[0m09:58:14.666552 [debug] [ThreadPool]: Using postgres connection "list_nike_dw_dbt_dev"
+[0m09:58:14.667523 [debug] [ThreadPool]: On list_nike_dw_dbt_dev: BEGIN
+[0m09:58:14.668229 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m09:58:14.687397 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m09:58:14.688451 [debug] [ThreadPool]: Using postgres connection "list_nike_dw_dbt_dev"
+[0m09:58:14.689208 [debug] [ThreadPool]: On list_nike_dw_dbt_dev: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "nike_profile", "target_name": "dev", "connection_name": "list_nike_dw_dbt_dev"} */
+select
+      'nike_dw' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'dbt_dev'
+    union all
+    select
+      'nike_dw' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'dbt_dev'
+    union all
+    select
+      'nike_dw' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'dbt_dev'
+  
+[0m09:58:14.708187 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.0 seconds
+[0m09:58:14.709748 [debug] [ThreadPool]: On list_nike_dw_dbt_dev: ROLLBACK
+[0m09:58:14.710573 [debug] [ThreadPool]: On list_nike_dw_dbt_dev: Close
+[0m09:58:14.714914 [debug] [MainThread]: Using postgres connection "master"
+[0m09:58:14.715709 [debug] [MainThread]: On master: BEGIN
+[0m09:58:14.716343 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m09:58:14.734960 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m09:58:14.735755 [debug] [MainThread]: Using postgres connection "master"
+[0m09:58:14.736556 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "nike_profile", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m09:58:14.763480 [debug] [MainThread]: SQL status: SELECT 0 in 0.0 seconds
+[0m09:58:14.764977 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6f355803-d99a-4c94-8cd3-e9cae895763c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b4f58980710>]}
+[0m09:58:14.765912 [debug] [MainThread]: On master: ROLLBACK
+[0m09:58:14.766903 [debug] [MainThread]: Using postgres connection "master"
+[0m09:58:14.767623 [debug] [MainThread]: On master: BEGIN
+[0m09:58:14.768559 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m09:58:14.769217 [debug] [MainThread]: On master: COMMIT
+[0m09:58:14.769807 [debug] [MainThread]: Using postgres connection "master"
+[0m09:58:14.770400 [debug] [MainThread]: On master: COMMIT
+[0m09:58:14.771301 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m09:58:14.772047 [debug] [MainThread]: On master: Close
+[0m09:58:14.772962 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m09:58:14.773778 [info ] [MainThread]: 
+[0m09:58:14.783101 [debug] [Thread-1 (]: Began running node model.nike_project.example_connection
+[0m09:58:14.783554 [debug] [Thread-2 (]: Began running node model.nike_project.stg_nike_global
+[0m09:58:14.784439 [info ] [Thread-1 (]: 1 of 2 START sql view model dbt_dev.example_connection ......................... [RUN]
+[0m09:58:14.785441 [info ] [Thread-2 (]: 2 of 2 START sql view model dbt_dev.stg_nike_global ............................ [RUN]
+[0m09:58:14.786300 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_nike_dw_dbt_dev, now model.nike_project.example_connection)
+[0m09:58:14.787099 [debug] [Thread-2 (]: Acquiring new postgres connection 'model.nike_project.stg_nike_global'
+[0m09:58:14.787767 [debug] [Thread-1 (]: Began compiling node model.nike_project.example_connection
+[0m09:58:14.788510 [debug] [Thread-2 (]: Began compiling node model.nike_project.stg_nike_global
+[0m09:58:14.793808 [debug] [Thread-1 (]: Writing injected SQL for node "model.nike_project.example_connection"
+[0m09:58:14.804786 [debug] [Thread-2 (]: Compilation Error in model stg_nike_global (models/staging/stg_nike_global.sql)
+  'dict object' has no attribute 'trim'. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+[0m09:58:14.806466 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6f355803-d99a-4c94-8cd3-e9cae895763c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b4f521b3910>]}
+[0m09:58:14.807552 [error] [Thread-2 (]: 2 of 2 ERROR creating sql view model dbt_dev.stg_nike_global ................... [[31mERROR[0m in 0.02s]
+[0m09:58:14.808865 [debug] [Thread-2 (]: Finished running node model.nike_project.stg_nike_global
+[0m09:58:14.811823 [debug] [Thread-1 (]: Began executing node model.nike_project.example_connection
+[0m09:58:14.841122 [debug] [Thread-1 (]: Writing runtime sql for node "model.nike_project.example_connection"
+[0m09:58:14.852034 [debug] [Thread-1 (]: Using postgres connection "model.nike_project.example_connection"
+[0m09:58:14.852881 [debug] [Thread-1 (]: On model.nike_project.example_connection: BEGIN
+[0m09:58:14.853537 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m09:58:14.872767 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m09:58:14.873603 [debug] [Thread-1 (]: Using postgres connection "model.nike_project.example_connection"
+[0m09:58:14.874422 [debug] [Thread-1 (]: On model.nike_project.example_connection: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "nike_profile", "target_name": "dev", "node_id": "model.nike_project.example_connection"} */
+
+  create view "nike_dw"."dbt_dev"."example_connection__dbt_tmp"
+    
+    
+  as (
+    -- Este es un modelo de ejemplo para verificar la conexión
+select 1 as id
+  );
+[0m09:58:14.936281 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m09:58:14.943355 [debug] [Thread-1 (]: Using postgres connection "model.nike_project.example_connection"
+[0m09:58:14.944283 [debug] [Thread-1 (]: On model.nike_project.example_connection: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "nike_profile", "target_name": "dev", "node_id": "model.nike_project.example_connection"} */
+alter table "nike_dw"."dbt_dev"."example_connection__dbt_tmp" rename to "example_connection"
+[0m09:58:14.945616 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m09:58:14.956439 [debug] [Thread-1 (]: On model.nike_project.example_connection: COMMIT
+[0m09:58:14.957431 [debug] [Thread-1 (]: Using postgres connection "model.nike_project.example_connection"
+[0m09:58:14.958173 [debug] [Thread-1 (]: On model.nike_project.example_connection: COMMIT
+[0m09:58:14.967949 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m09:58:14.973487 [debug] [Thread-1 (]: Applying DROP to: "nike_dw"."dbt_dev"."example_connection__dbt_backup"
+[0m09:58:14.978775 [debug] [Thread-1 (]: Using postgres connection "model.nike_project.example_connection"
+[0m09:58:14.979700 [debug] [Thread-1 (]: On model.nike_project.example_connection: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "nike_profile", "target_name": "dev", "node_id": "model.nike_project.example_connection"} */
+drop view if exists "nike_dw"."dbt_dev"."example_connection__dbt_backup" cascade
+[0m09:58:14.980904 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m09:58:14.983129 [debug] [Thread-1 (]: On model.nike_project.example_connection: Close
+[0m09:58:14.984325 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6f355803-d99a-4c94-8cd3-e9cae895763c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b4f58aacf10>]}
+[0m09:58:14.985363 [info ] [Thread-1 (]: 1 of 2 OK created sql view model dbt_dev.example_connection .................... [[32mCREATE VIEW[0m in 0.20s]
+[0m09:58:14.986424 [debug] [Thread-1 (]: Finished running node model.nike_project.example_connection
+[0m09:58:14.988669 [debug] [MainThread]: Using postgres connection "master"
+[0m09:58:14.989619 [debug] [MainThread]: On master: BEGIN
+[0m09:58:14.990432 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m09:58:15.009706 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m09:58:15.010548 [debug] [MainThread]: On master: COMMIT
+[0m09:58:15.011286 [debug] [MainThread]: Using postgres connection "master"
+[0m09:58:15.011896 [debug] [MainThread]: On master: COMMIT
+[0m09:58:15.012659 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m09:58:15.013305 [debug] [MainThread]: On master: Close
+[0m09:58:15.014375 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m09:58:15.015114 [debug] [MainThread]: Connection 'model.nike_project.example_connection' was properly closed.
+[0m09:58:15.015724 [debug] [MainThread]: Connection 'model.nike_project.stg_nike_global' was properly closed.
+[0m09:58:15.016481 [info ] [MainThread]: 
+[0m09:58:15.017295 [info ] [MainThread]: Finished running 2 view models in 0 hours 0 minutes and 0.53 seconds (0.53s).
+[0m09:58:15.018482 [debug] [MainThread]: Command end result
+[0m09:58:15.064413 [info ] [MainThread]: 
+[0m09:58:15.065644 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m09:58:15.066808 [info ] [MainThread]: 
+[0m09:58:15.068038 [error] [MainThread]:   Compilation Error in model stg_nike_global (models/staging/stg_nike_global.sql)
+  'dict object' has no attribute 'trim'. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+[0m09:58:15.069190 [info ] [MainThread]: 
+[0m09:58:15.070144 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=1 SKIP=0 TOTAL=2
+[0m09:58:15.071737 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 2.9246662, "process_user_time": 2.659903, "process_kernel_time": 0.408904, "process_mem_max_rss": "117516", "process_in_blocks": "17952", "process_out_blocks": "1272", "command_success": false}
+[0m09:58:15.072809 [debug] [MainThread]: Command `dbt run` failed at 09:58:15.072690 after 2.93 seconds
+[0m09:58:15.073645 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b4f5a4383d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b4f5a5e4510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b4f5e3b83d0>]}
+[0m09:58:15.074551 [debug] [MainThread]: Flushing usage events
+[0m09:59:13.303836 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78f3922febd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78f3922ff010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78f3922fc550>]}
+
+
+============================== 09:59:13.309819 | 3167a279-e2f1-4781-beb8-ae44f58880ac ==============================
+[0m09:59:13.309819 [info ] [MainThread]: Running with dbt=1.8.3
+[0m09:59:13.310857 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/usr/app/logs', 'fail_fast': 'False', 'profiles_dir': '/usr/app', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt run', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m09:59:13.451042 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3167a279-e2f1-4781-beb8-ae44f58880ac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78f3921888d0>]}
+[0m09:59:13.491208 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '3167a279-e2f1-4781-beb8-ae44f58880ac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78f393ef5c10>]}
+[0m09:59:13.492729 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m09:59:13.517961 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m09:59:14.351474 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 2 files changed.
+[0m09:59:14.352959 [debug] [MainThread]: Partial parsing: updated file: nike_project://models/staging/stg_nike_global.yml
+[0m09:59:14.353730 [debug] [MainThread]: Partial parsing: updated file: nike_project://models/staging/stg_nike_global.sql
+[0m09:59:14.658541 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.nike_project.marts
+[0m09:59:14.669959 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '3167a279-e2f1-4781-beb8-ae44f58880ac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78f3904bd3d0>]}
+[0m09:59:14.765149 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '3167a279-e2f1-4781-beb8-ae44f58880ac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78f3903e5cd0>]}
+[0m09:59:14.766073 [info ] [MainThread]: Found 2 models, 4 data tests, 1 source, 531 macros
+[0m09:59:14.767174 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3167a279-e2f1-4781-beb8-ae44f58880ac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78f390539090>]}
+[0m09:59:14.769621 [info ] [MainThread]: 
+[0m09:59:14.770775 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m09:59:14.774646 [debug] [ThreadPool]: Acquiring new postgres connection 'list_nike_dw'
+[0m09:59:14.817010 [debug] [ThreadPool]: Using postgres connection "list_nike_dw"
+[0m09:59:14.818462 [debug] [ThreadPool]: On list_nike_dw: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "nike_profile", "target_name": "dev", "connection_name": "list_nike_dw"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m09:59:14.819405 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:59:14.842635 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.0 seconds
+[0m09:59:14.844174 [debug] [ThreadPool]: On list_nike_dw: Close
+[0m09:59:14.846118 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_nike_dw, now list_nike_dw_dbt_dev)
+[0m09:59:14.915956 [debug] [ThreadPool]: Using postgres connection "list_nike_dw_dbt_dev"
+[0m09:59:14.916904 [debug] [ThreadPool]: On list_nike_dw_dbt_dev: BEGIN
+[0m09:59:14.917542 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m09:59:14.936349 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m09:59:14.937357 [debug] [ThreadPool]: Using postgres connection "list_nike_dw_dbt_dev"
+[0m09:59:14.938054 [debug] [ThreadPool]: On list_nike_dw_dbt_dev: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "nike_profile", "target_name": "dev", "connection_name": "list_nike_dw_dbt_dev"} */
+select
+      'nike_dw' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'dbt_dev'
+    union all
+    select
+      'nike_dw' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'dbt_dev'
+    union all
+    select
+      'nike_dw' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'dbt_dev'
+  
+[0m09:59:14.945173 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.0 seconds
+[0m09:59:14.946805 [debug] [ThreadPool]: On list_nike_dw_dbt_dev: ROLLBACK
+[0m09:59:14.947587 [debug] [ThreadPool]: On list_nike_dw_dbt_dev: Close
+[0m09:59:14.952138 [debug] [MainThread]: Using postgres connection "master"
+[0m09:59:14.952932 [debug] [MainThread]: On master: BEGIN
+[0m09:59:14.953526 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m09:59:14.971808 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m09:59:14.972700 [debug] [MainThread]: Using postgres connection "master"
+[0m09:59:14.973581 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "nike_profile", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m09:59:14.987966 [debug] [MainThread]: SQL status: SELECT 0 in 0.0 seconds
+[0m09:59:14.989499 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3167a279-e2f1-4781-beb8-ae44f58880ac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78f3903d7910>]}
+[0m09:59:14.990281 [debug] [MainThread]: On master: ROLLBACK
+[0m09:59:14.991467 [debug] [MainThread]: Using postgres connection "master"
+[0m09:59:14.992280 [debug] [MainThread]: On master: BEGIN
+[0m09:59:14.993321 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m09:59:14.993984 [debug] [MainThread]: On master: COMMIT
+[0m09:59:14.994596 [debug] [MainThread]: Using postgres connection "master"
+[0m09:59:14.995209 [debug] [MainThread]: On master: COMMIT
+[0m09:59:14.996000 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m09:59:14.996695 [debug] [MainThread]: On master: Close
+[0m09:59:14.997800 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m09:59:14.998784 [info ] [MainThread]: 
+[0m09:59:15.007633 [debug] [Thread-1 (]: Began running node model.nike_project.example_connection
+[0m09:59:15.008020 [debug] [Thread-2 (]: Began running node model.nike_project.stg_nike_global
+[0m09:59:15.008814 [info ] [Thread-1 (]: 1 of 2 START sql view model dbt_dev.example_connection ......................... [RUN]
+[0m09:59:15.009996 [info ] [Thread-2 (]: 2 of 2 START sql view model dbt_dev.stg_nike_global ............................ [RUN]
+[0m09:59:15.011076 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_nike_dw_dbt_dev, now model.nike_project.example_connection)
+[0m09:59:15.012009 [debug] [Thread-2 (]: Acquiring new postgres connection 'model.nike_project.stg_nike_global'
+[0m09:59:15.012791 [debug] [Thread-1 (]: Began compiling node model.nike_project.example_connection
+[0m09:59:15.013482 [debug] [Thread-2 (]: Began compiling node model.nike_project.stg_nike_global
+[0m09:59:15.018947 [debug] [Thread-1 (]: Writing injected SQL for node "model.nike_project.example_connection"
+[0m09:59:15.023914 [debug] [Thread-2 (]: Writing injected SQL for node "model.nike_project.stg_nike_global"
+[0m09:59:15.028271 [debug] [Thread-1 (]: Began executing node model.nike_project.example_connection
+[0m09:59:15.041093 [debug] [Thread-2 (]: Began executing node model.nike_project.stg_nike_global
+[0m09:59:15.058096 [debug] [Thread-1 (]: Writing runtime sql for node "model.nike_project.example_connection"
+[0m09:59:15.061109 [debug] [Thread-2 (]: Writing runtime sql for node "model.nike_project.stg_nike_global"
+[0m09:59:15.065763 [debug] [Thread-1 (]: Using postgres connection "model.nike_project.example_connection"
+[0m09:59:15.066819 [debug] [Thread-1 (]: On model.nike_project.example_connection: BEGIN
+[0m09:59:15.067501 [debug] [Thread-2 (]: Using postgres connection "model.nike_project.stg_nike_global"
+[0m09:59:15.067775 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m09:59:15.068436 [debug] [Thread-2 (]: On model.nike_project.stg_nike_global: BEGIN
+[0m09:59:15.069884 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m09:59:15.087027 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m09:59:15.087461 [debug] [Thread-2 (]: SQL status: BEGIN in 0.0 seconds
+[0m09:59:15.088136 [debug] [Thread-1 (]: Using postgres connection "model.nike_project.example_connection"
+[0m09:59:15.089007 [debug] [Thread-2 (]: Using postgres connection "model.nike_project.stg_nike_global"
+[0m09:59:15.089700 [debug] [Thread-1 (]: On model.nike_project.example_connection: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "nike_profile", "target_name": "dev", "node_id": "model.nike_project.example_connection"} */
+
+  create view "nike_dw"."dbt_dev"."example_connection__dbt_tmp"
+    
+    
+  as (
+    -- Este es un modelo de ejemplo para verificar la conexión
+select 1 as id
+  );
+[0m09:59:15.090514 [debug] [Thread-2 (]: On model.nike_project.stg_nike_global: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "nike_profile", "target_name": "dev", "node_id": "model.nike_project.stg_nike_global"} */
+
+  create view "nike_dw"."dbt_dev"."stg_nike_global__dbt_tmp"
+    
+    
+  as (
+    -- models/staging/stg_nike_global.sql
+
+with source as (
+    select * from "nike_dw"."raw"."global_nike"
+),
+
+renamed as (
+    select
+        -- Create a unique ID for each record based on its primary key
+        md5(cast(coalesce(cast(snapshot_date as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(country_code as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(sku as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT)) as nike_id,
+        cast(snapshot_date as date) as snapshot_date,
+        country_code,
+        sku,
+        product_name,
+        category,
+        subcategory,
+        trim(gender_segment) as gender_segment,
+        currency,
+        cast(nullif(price_local, 'None') as numeric) as price_local,
+        cast(nullif(sale_price_local, 'None') as numeric) as sale_price_local,
+        record_source
+    from source
+),
+
+cleaned as (
+    select
+        *,
+        -- Price correction logic: Use the minimum of price and sale_price (to handle the 210k errors detected)
+        least(price_local, coalesce(sale_price_local, price_local)) as effective_price_local,
+        
+        -- Gender normalization logic
+        case 
+            when gender_segment = 'MEN' then 'MEN'
+            when gender_segment = 'WOMEN' then 'WOMEN'
+            when gender_segment in ('MEN|WOMEN', 'WOMEN|MEN') then 'UNISEX'
+            when gender_segment like '%BOYS%' or gender_segment like '%GIRLS%' then 'KIDS'
+            else 'OTHER'
+        end as gender_normalized
+    from renamed
+),
+
+deduplicated as (
+    -- Remove the 13k duplicates by keeping the most recent or highest quality record
+    select * from (
+        select 
+            *,
+            row_number() over (
+                partition by snapshot_date, country_code, sku 
+                order by record_source desc -- prioritizing sources if needed
+            ) as rn
+        from cleaned
+    ) where rn = 1
+)
+
+select 
+    nike_id,
+    snapshot_date,
+    country_code,
+    sku,
+    product_name,
+    category,
+    subcategory,
+    gender_normalized as gender,
+    currency,
+    price_local,
+    sale_price_local,
+    effective_price_local,
+    record_source
+from deduplicated
+  );
+[0m09:59:15.092318 [debug] [Thread-2 (]: Postgres adapter: Postgres error: subquery in FROM must have an alias
+LINE 50:     select * from (
+                           ^
+HINT:  For example, FROM (SELECT ...) [AS] foo.
+
+[0m09:59:15.092970 [debug] [Thread-2 (]: On model.nike_project.stg_nike_global: ROLLBACK
+[0m09:59:15.093833 [debug] [Thread-2 (]: On model.nike_project.stg_nike_global: Close
+[0m09:59:15.097229 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m09:59:15.103008 [debug] [Thread-1 (]: Using postgres connection "model.nike_project.example_connection"
+[0m09:59:15.104002 [debug] [Thread-1 (]: On model.nike_project.example_connection: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "nike_profile", "target_name": "dev", "node_id": "model.nike_project.example_connection"} */
+alter table "nike_dw"."dbt_dev"."example_connection" rename to "example_connection__dbt_backup"
+[0m09:59:15.105260 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m09:59:15.107229 [debug] [Thread-2 (]: Database Error in model stg_nike_global (models/staging/stg_nike_global.sql)
+  subquery in FROM must have an alias
+  LINE 50:     select * from (
+                             ^
+  HINT:  For example, FROM (SELECT ...) [AS] foo.
+  compiled Code at target/run/nike_project/models/staging/stg_nike_global.sql
+[0m09:59:15.111464 [debug] [Thread-1 (]: Using postgres connection "model.nike_project.example_connection"
+[0m09:59:15.113478 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3167a279-e2f1-4781-beb8-ae44f58880ac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78f3907f3150>]}
+[0m09:59:15.114368 [debug] [Thread-1 (]: On model.nike_project.example_connection: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "nike_profile", "target_name": "dev", "node_id": "model.nike_project.example_connection"} */
+alter table "nike_dw"."dbt_dev"."example_connection__dbt_tmp" rename to "example_connection"
+[0m09:59:15.115310 [error] [Thread-2 (]: 2 of 2 ERROR creating sql view model dbt_dev.stg_nike_global ................... [[31mERROR[0m in 0.10s]
+[0m09:59:15.116529 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m09:59:15.117024 [debug] [Thread-2 (]: Finished running node model.nike_project.stg_nike_global
+[0m09:59:15.129898 [debug] [Thread-1 (]: On model.nike_project.example_connection: COMMIT
+[0m09:59:15.132089 [debug] [Thread-1 (]: Using postgres connection "model.nike_project.example_connection"
+[0m09:59:15.132845 [debug] [Thread-1 (]: On model.nike_project.example_connection: COMMIT
+[0m09:59:15.142384 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m09:59:15.148369 [debug] [Thread-1 (]: Applying DROP to: "nike_dw"."dbt_dev"."example_connection__dbt_backup"
+[0m09:59:15.154066 [debug] [Thread-1 (]: Using postgres connection "model.nike_project.example_connection"
+[0m09:59:15.155161 [debug] [Thread-1 (]: On model.nike_project.example_connection: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "nike_profile", "target_name": "dev", "node_id": "model.nike_project.example_connection"} */
+drop view if exists "nike_dw"."dbt_dev"."example_connection__dbt_backup" cascade
+[0m09:59:15.196441 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m09:59:15.199223 [debug] [Thread-1 (]: On model.nike_project.example_connection: Close
+[0m09:59:15.200360 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3167a279-e2f1-4781-beb8-ae44f58880ac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78f3905c91d0>]}
+[0m09:59:15.201308 [info ] [Thread-1 (]: 1 of 2 OK created sql view model dbt_dev.example_connection .................... [[32mCREATE VIEW[0m in 0.19s]
+[0m09:59:15.202490 [debug] [Thread-1 (]: Finished running node model.nike_project.example_connection
+[0m09:59:15.205412 [debug] [MainThread]: Using postgres connection "master"
+[0m09:59:15.206280 [debug] [MainThread]: On master: BEGIN
+[0m09:59:15.206972 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m09:59:15.225762 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m09:59:15.226617 [debug] [MainThread]: On master: COMMIT
+[0m09:59:15.227405 [debug] [MainThread]: Using postgres connection "master"
+[0m09:59:15.228253 [debug] [MainThread]: On master: COMMIT
+[0m09:59:15.229136 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m09:59:15.229810 [debug] [MainThread]: On master: Close
+[0m09:59:15.230611 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m09:59:15.231199 [debug] [MainThread]: Connection 'model.nike_project.example_connection' was properly closed.
+[0m09:59:15.231812 [debug] [MainThread]: Connection 'model.nike_project.stg_nike_global' was properly closed.
+[0m09:59:15.232501 [info ] [MainThread]: 
+[0m09:59:15.233435 [info ] [MainThread]: Finished running 2 view models in 0 hours 0 minutes and 0.46 seconds (0.46s).
+[0m09:59:15.234945 [debug] [MainThread]: Command end result
+[0m09:59:15.280324 [info ] [MainThread]: 
+[0m09:59:15.281303 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m09:59:15.282370 [info ] [MainThread]: 
+[0m09:59:15.283699 [error] [MainThread]:   Database Error in model stg_nike_global (models/staging/stg_nike_global.sql)
+  subquery in FROM must have an alias
+  LINE 50:     select * from (
+                             ^
+  HINT:  For example, FROM (SELECT ...) [AS] foo.
+  compiled Code at target/run/nike_project/models/staging/stg_nike_global.sql
+[0m09:59:15.284668 [info ] [MainThread]: 
+[0m09:59:15.285481 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=1 SKIP=0 TOTAL=2
+[0m09:59:15.286748 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 2.0323792, "process_user_time": 1.858239, "process_kernel_time": 0.454416, "process_mem_max_rss": "116712", "process_in_blocks": "280", "process_out_blocks": "1272", "command_success": false}
+[0m09:59:15.287631 [debug] [MainThread]: Command `dbt run` failed at 09:59:15.287535 after 2.03 seconds
+[0m09:59:15.288480 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78f396264d10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78f396264410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78f3903acb90>]}
+[0m09:59:15.289402 [debug] [MainThread]: Flushing usage events
+[0m09:59:51.271726 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7aa8e81dba50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7aa8e8220190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7aa8e8e4a7d0>]}
+
+
+============================== 09:59:51.277165 | a3401439-8a61-43f3-9dbc-97e28153d039 ==============================
+[0m09:59:51.277165 [info ] [MainThread]: Running with dbt=1.8.3
+[0m09:59:51.278338 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/usr/app/logs', 'debug': 'False', 'profiles_dir': '/usr/app', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt run', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m09:59:51.414104 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a3401439-8a61-43f3-9dbc-97e28153d039', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7aa8e6908250>]}
+[0m09:59:51.456338 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a3401439-8a61-43f3-9dbc-97e28153d039', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7aa8e9e01490>]}
+[0m09:59:51.457635 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m09:59:51.480925 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m09:59:52.213975 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m09:59:52.214956 [debug] [MainThread]: Partial parsing: updated file: nike_project://models/staging/stg_nike_global.sql
+[0m09:59:52.492718 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.nike_project.marts
+[0m09:59:52.502399 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a3401439-8a61-43f3-9dbc-97e28153d039', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7aa8e6915a10>]}
+[0m09:59:52.620391 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a3401439-8a61-43f3-9dbc-97e28153d039', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7aa8e62d4f10>]}
+[0m09:59:52.621418 [info ] [MainThread]: Found 2 models, 4 data tests, 1 source, 531 macros
+[0m09:59:52.622304 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a3401439-8a61-43f3-9dbc-97e28153d039', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7aa8e640f290>]}
+[0m09:59:52.624470 [info ] [MainThread]: 
+[0m09:59:52.625787 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m09:59:52.629360 [debug] [ThreadPool]: Acquiring new postgres connection 'list_nike_dw'
+[0m09:59:52.670943 [debug] [ThreadPool]: Using postgres connection "list_nike_dw"
+[0m09:59:52.671912 [debug] [ThreadPool]: On list_nike_dw: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "nike_profile", "target_name": "dev", "connection_name": "list_nike_dw"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m09:59:52.672630 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:59:52.695476 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.0 seconds
+[0m09:59:52.697112 [debug] [ThreadPool]: On list_nike_dw: Close
+[0m09:59:52.698788 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_nike_dw, now list_nike_dw_dbt_dev)
+[0m09:59:52.757515 [debug] [ThreadPool]: Using postgres connection "list_nike_dw_dbt_dev"
+[0m09:59:52.758556 [debug] [ThreadPool]: On list_nike_dw_dbt_dev: BEGIN
+[0m09:59:52.759255 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m09:59:52.776812 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m09:59:52.777583 [debug] [ThreadPool]: Using postgres connection "list_nike_dw_dbt_dev"
+[0m09:59:52.778264 [debug] [ThreadPool]: On list_nike_dw_dbt_dev: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "nike_profile", "target_name": "dev", "connection_name": "list_nike_dw_dbt_dev"} */
+select
+      'nike_dw' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'dbt_dev'
+    union all
+    select
+      'nike_dw' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'dbt_dev'
+    union all
+    select
+      'nike_dw' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'dbt_dev'
+  
+[0m09:59:52.784216 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.0 seconds
+[0m09:59:52.785609 [debug] [ThreadPool]: On list_nike_dw_dbt_dev: ROLLBACK
+[0m09:59:52.786434 [debug] [ThreadPool]: On list_nike_dw_dbt_dev: Close
+[0m09:59:52.790658 [debug] [MainThread]: Using postgres connection "master"
+[0m09:59:52.791400 [debug] [MainThread]: On master: BEGIN
+[0m09:59:52.792007 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m09:59:52.808668 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m09:59:52.809330 [debug] [MainThread]: Using postgres connection "master"
+[0m09:59:52.809990 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "nike_profile", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m09:59:52.822894 [debug] [MainThread]: SQL status: SELECT 0 in 0.0 seconds
+[0m09:59:52.824209 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a3401439-8a61-43f3-9dbc-97e28153d039', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7aa8e643af90>]}
+[0m09:59:52.824884 [debug] [MainThread]: On master: ROLLBACK
+[0m09:59:52.825623 [debug] [MainThread]: Using postgres connection "master"
+[0m09:59:52.826287 [debug] [MainThread]: On master: BEGIN
+[0m09:59:52.827167 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m09:59:52.827806 [debug] [MainThread]: On master: COMMIT
+[0m09:59:52.828380 [debug] [MainThread]: Using postgres connection "master"
+[0m09:59:52.828946 [debug] [MainThread]: On master: COMMIT
+[0m09:59:52.829635 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m09:59:52.830294 [debug] [MainThread]: On master: Close
+[0m09:59:52.831049 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m09:59:52.831957 [info ] [MainThread]: 
+[0m09:59:52.839797 [debug] [Thread-1 (]: Began running node model.nike_project.example_connection
+[0m09:59:52.840171 [debug] [Thread-2 (]: Began running node model.nike_project.stg_nike_global
+[0m09:59:52.840926 [info ] [Thread-1 (]: 1 of 2 START sql view model dbt_dev.example_connection ......................... [RUN]
+[0m09:59:52.841939 [info ] [Thread-2 (]: 2 of 2 START sql view model dbt_dev.stg_nike_global ............................ [RUN]
+[0m09:59:52.842943 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_nike_dw_dbt_dev, now model.nike_project.example_connection)
+[0m09:59:52.843867 [debug] [Thread-2 (]: Acquiring new postgres connection 'model.nike_project.stg_nike_global'
+[0m09:59:52.844613 [debug] [Thread-1 (]: Began compiling node model.nike_project.example_connection
+[0m09:59:52.845319 [debug] [Thread-2 (]: Began compiling node model.nike_project.stg_nike_global
+[0m09:59:52.850752 [debug] [Thread-1 (]: Writing injected SQL for node "model.nike_project.example_connection"
+[0m09:59:52.855664 [debug] [Thread-2 (]: Writing injected SQL for node "model.nike_project.stg_nike_global"
+[0m09:59:52.859668 [debug] [Thread-1 (]: Began executing node model.nike_project.example_connection
+[0m09:59:52.866026 [debug] [Thread-2 (]: Began executing node model.nike_project.stg_nike_global
+[0m09:59:52.890243 [debug] [Thread-1 (]: Writing runtime sql for node "model.nike_project.example_connection"
+[0m09:59:52.892588 [debug] [Thread-2 (]: Writing runtime sql for node "model.nike_project.stg_nike_global"
+[0m09:59:52.896675 [debug] [Thread-1 (]: Using postgres connection "model.nike_project.example_connection"
+[0m09:59:52.897475 [debug] [Thread-1 (]: On model.nike_project.example_connection: BEGIN
+[0m09:59:52.897829 [debug] [Thread-2 (]: Using postgres connection "model.nike_project.stg_nike_global"
+[0m09:59:52.898519 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m09:59:52.899196 [debug] [Thread-2 (]: On model.nike_project.stg_nike_global: BEGIN
+[0m09:59:52.900449 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m09:59:52.916918 [debug] [Thread-2 (]: SQL status: BEGIN in 0.0 seconds
+[0m09:59:52.917363 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m09:59:52.917989 [debug] [Thread-2 (]: Using postgres connection "model.nike_project.stg_nike_global"
+[0m09:59:52.918661 [debug] [Thread-1 (]: Using postgres connection "model.nike_project.example_connection"
+[0m09:59:52.919388 [debug] [Thread-2 (]: On model.nike_project.stg_nike_global: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "nike_profile", "target_name": "dev", "node_id": "model.nike_project.stg_nike_global"} */
+
+  create view "nike_dw"."dbt_dev"."stg_nike_global__dbt_tmp"
+    
+    
+  as (
+    -- models/staging/stg_nike_global.sql
+
+with source as (
+    select * from "nike_dw"."raw"."global_nike"
+),
+
+renamed as (
+    select
+        -- Create a unique ID for each record based on its primary key
+        md5(cast(coalesce(cast(snapshot_date as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(country_code as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(sku as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT)) as nike_id,
+        cast(snapshot_date as date) as snapshot_date,
+        country_code,
+        sku,
+        product_name,
+        category,
+        subcategory,
+        trim(gender_segment) as gender_segment,
+        currency,
+        cast(nullif(price_local, 'None') as numeric) as price_local,
+        cast(nullif(sale_price_local, 'None') as numeric) as sale_price_local,
+        record_source
+    from source
+),
+
+cleaned as (
+    select
+        *,
+        -- Price correction logic: Use the minimum of price and sale_price (to handle the 210k errors detected)
+        least(price_local, coalesce(sale_price_local, price_local)) as effective_price_local,
+        
+        -- Gender normalization logic
+        case 
+            when gender_segment = 'MEN' then 'MEN'
+            when gender_segment = 'WOMEN' then 'WOMEN'
+            when gender_segment in ('MEN|WOMEN', 'WOMEN|MEN') then 'UNISEX'
+            when gender_segment like '%BOYS%' or gender_segment like '%GIRLS%' then 'KIDS'
+            else 'OTHER'
+        end as gender_normalized
+    from renamed
+),
+
+deduplicated as (
+    -- Remove the 13k duplicates by keeping the most recent or highest quality record
+    select * from (
+        select 
+            *,
+            row_number() over (
+                partition by snapshot_date, country_code, sku 
+                order by record_source desc
+            ) as rn
+        from cleaned
+    ) as sub
+    where rn = 1
+)
+
+select 
+    nike_id,
+    snapshot_date,
+    country_code,
+    sku,
+    product_name,
+    category,
+    subcategory,
+    gender_normalized as gender,
+    currency,
+    price_local,
+    sale_price_local,
+    effective_price_local,
+    record_source
+from deduplicated
+  );
+[0m09:59:52.920110 [debug] [Thread-1 (]: On model.nike_project.example_connection: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "nike_profile", "target_name": "dev", "node_id": "model.nike_project.example_connection"} */
+
+  create view "nike_dw"."dbt_dev"."example_connection__dbt_tmp"
+    
+    
+  as (
+    -- Este es un modelo de ejemplo para verificar la conexión
+select 1 as id
+  );
+[0m09:59:52.926729 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m09:59:52.932536 [debug] [Thread-1 (]: Using postgres connection "model.nike_project.example_connection"
+[0m09:59:52.933366 [debug] [Thread-1 (]: On model.nike_project.example_connection: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "nike_profile", "target_name": "dev", "node_id": "model.nike_project.example_connection"} */
+alter table "nike_dw"."dbt_dev"."example_connection" rename to "example_connection__dbt_backup"
+[0m09:59:52.934507 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m09:59:52.938883 [debug] [Thread-1 (]: Using postgres connection "model.nike_project.example_connection"
+[0m09:59:52.939658 [debug] [Thread-1 (]: On model.nike_project.example_connection: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "nike_profile", "target_name": "dev", "node_id": "model.nike_project.example_connection"} */
+alter table "nike_dw"."dbt_dev"."example_connection__dbt_tmp" rename to "example_connection"
+[0m09:59:52.940686 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m09:59:52.952278 [debug] [Thread-2 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m09:59:52.953532 [debug] [Thread-1 (]: On model.nike_project.example_connection: COMMIT
+[0m09:59:52.956601 [debug] [Thread-2 (]: Using postgres connection "model.nike_project.stg_nike_global"
+[0m09:59:52.957421 [debug] [Thread-1 (]: Using postgres connection "model.nike_project.example_connection"
+[0m09:59:52.958132 [debug] [Thread-2 (]: On model.nike_project.stg_nike_global: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "nike_profile", "target_name": "dev", "node_id": "model.nike_project.stg_nike_global"} */
+alter table "nike_dw"."dbt_dev"."stg_nike_global__dbt_tmp" rename to "stg_nike_global"
+[0m09:59:52.958840 [debug] [Thread-1 (]: On model.nike_project.example_connection: COMMIT
+[0m09:59:52.960173 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m09:59:52.961768 [debug] [Thread-2 (]: On model.nike_project.stg_nike_global: COMMIT
+[0m09:59:52.962513 [debug] [Thread-2 (]: Using postgres connection "model.nike_project.stg_nike_global"
+[0m09:59:52.963149 [debug] [Thread-2 (]: On model.nike_project.stg_nike_global: COMMIT
+[0m09:59:52.968217 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m09:59:52.973911 [debug] [Thread-1 (]: Applying DROP to: "nike_dw"."dbt_dev"."example_connection__dbt_backup"
+[0m09:59:52.974655 [debug] [Thread-2 (]: SQL status: COMMIT in 0.0 seconds
+[0m09:59:52.979297 [debug] [Thread-1 (]: Using postgres connection "model.nike_project.example_connection"
+[0m09:59:52.982105 [debug] [Thread-2 (]: Applying DROP to: "nike_dw"."dbt_dev"."stg_nike_global__dbt_backup"
+[0m09:59:52.982997 [debug] [Thread-1 (]: On model.nike_project.example_connection: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "nike_profile", "target_name": "dev", "node_id": "model.nike_project.example_connection"} */
+drop view if exists "nike_dw"."dbt_dev"."example_connection__dbt_backup" cascade
+[0m09:59:52.984039 [debug] [Thread-2 (]: Using postgres connection "model.nike_project.stg_nike_global"
+[0m09:59:52.985922 [debug] [Thread-2 (]: On model.nike_project.stg_nike_global: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "nike_profile", "target_name": "dev", "node_id": "model.nike_project.stg_nike_global"} */
+drop view if exists "nike_dw"."dbt_dev"."stg_nike_global__dbt_backup" cascade
+[0m09:59:52.987170 [debug] [Thread-2 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m09:59:52.987518 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m09:59:52.989968 [debug] [Thread-2 (]: On model.nike_project.stg_nike_global: Close
+[0m09:59:52.991514 [debug] [Thread-1 (]: On model.nike_project.example_connection: Close
+[0m09:59:52.993208 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a3401439-8a61-43f3-9dbc-97e28153d039', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7aa8e698df90>]}
+[0m09:59:52.994021 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a3401439-8a61-43f3-9dbc-97e28153d039', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7aa8e6531ed0>]}
+[0m09:59:52.996561 [info ] [Thread-2 (]: 2 of 2 OK created sql view model dbt_dev.stg_nike_global ....................... [[32mCREATE VIEW[0m in 0.15s]
+[0m09:59:52.997931 [info ] [Thread-1 (]: 1 of 2 OK created sql view model dbt_dev.example_connection .................... [[32mCREATE VIEW[0m in 0.15s]
+[0m09:59:52.999409 [debug] [Thread-2 (]: Finished running node model.nike_project.stg_nike_global
+[0m09:59:53.000394 [debug] [Thread-1 (]: Finished running node model.nike_project.example_connection
+[0m09:59:53.003213 [debug] [MainThread]: Using postgres connection "master"
+[0m09:59:53.004125 [debug] [MainThread]: On master: BEGIN
+[0m09:59:53.004759 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m09:59:53.023548 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m09:59:53.024528 [debug] [MainThread]: On master: COMMIT
+[0m09:59:53.025215 [debug] [MainThread]: Using postgres connection "master"
+[0m09:59:53.026142 [debug] [MainThread]: On master: COMMIT
+[0m09:59:53.027341 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m09:59:53.028008 [debug] [MainThread]: On master: Close
+[0m09:59:53.028873 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m09:59:53.029475 [debug] [MainThread]: Connection 'model.nike_project.example_connection' was properly closed.
+[0m09:59:53.030112 [debug] [MainThread]: Connection 'model.nike_project.stg_nike_global' was properly closed.
+[0m09:59:53.030948 [info ] [MainThread]: 
+[0m09:59:53.031720 [info ] [MainThread]: Finished running 2 view models in 0 hours 0 minutes and 0.41 seconds (0.41s).
+[0m09:59:53.033153 [debug] [MainThread]: Command end result
+[0m09:59:53.080497 [info ] [MainThread]: 
+[0m09:59:53.081496 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m09:59:53.082386 [info ] [MainThread]: 
+[0m09:59:53.083145 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m09:59:53.084440 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.8565542, "process_user_time": 1.757874, "process_kernel_time": 0.405354, "process_mem_max_rss": "116780", "process_out_blocks": "1272", "process_in_blocks": "0"}
+[0m09:59:53.085359 [debug] [MainThread]: Command `dbt run` succeeded at 09:59:53.085258 after 1.86 seconds
+[0m09:59:53.086060 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7aa8ec024710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7aa8ec1803d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7aa8ec180d10>]}
+[0m09:59:53.086851 [debug] [MainThread]: Flushing usage events
+[0m10:01:03.852695 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb8a8ea3690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb8a8ea3090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb8a8ea2a10>]}
+
+
+============================== 10:01:03.858257 | 88a106cd-4fef-47bf-9832-4fa01f05293f ==============================
+[0m10:01:03.858257 [info ] [MainThread]: Running with dbt=1.8.3
+[0m10:01:03.859294 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/usr/app', 'version_check': 'True', 'debug': 'False', 'log_path': '/usr/app/logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt test', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m10:01:03.990577 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '88a106cd-4fef-47bf-9832-4fa01f05293f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb8a759d650>]}
+[0m10:01:04.028467 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '88a106cd-4fef-47bf-9832-4fa01f05293f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb8aaac95d0>]}
+[0m10:01:04.029673 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m10:01:04.056884 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m10:01:04.804087 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m10:01:04.804840 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m10:01:04.808798 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.nike_project.marts
+[0m10:01:04.836335 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '88a106cd-4fef-47bf-9832-4fa01f05293f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb8a909fd10>]}
+[0m10:01:04.944419 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '88a106cd-4fef-47bf-9832-4fa01f05293f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb8a70bf350>]}
+[0m10:01:04.945281 [info ] [MainThread]: Found 2 models, 4 data tests, 1 source, 531 macros
+[0m10:01:04.946352 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '88a106cd-4fef-47bf-9832-4fa01f05293f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb8aa2fce90>]}
+[0m10:01:04.948478 [info ] [MainThread]: 
+[0m10:01:04.949526 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m10:01:04.953007 [debug] [ThreadPool]: Acquiring new postgres connection 'list_nike_dw_dbt_dev'
+[0m10:01:04.995914 [debug] [ThreadPool]: Using postgres connection "list_nike_dw_dbt_dev"
+[0m10:01:04.996764 [debug] [ThreadPool]: On list_nike_dw_dbt_dev: BEGIN
+[0m10:01:04.997387 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:01:05.016051 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m10:01:05.016783 [debug] [ThreadPool]: Using postgres connection "list_nike_dw_dbt_dev"
+[0m10:01:05.017400 [debug] [ThreadPool]: On list_nike_dw_dbt_dev: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "nike_profile", "target_name": "dev", "connection_name": "list_nike_dw_dbt_dev"} */
+select
+      'nike_dw' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'dbt_dev'
+    union all
+    select
+      'nike_dw' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'dbt_dev'
+    union all
+    select
+      'nike_dw' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'dbt_dev'
+  
+[0m10:01:05.023854 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.0 seconds
+[0m10:01:05.025326 [debug] [ThreadPool]: On list_nike_dw_dbt_dev: ROLLBACK
+[0m10:01:05.026100 [debug] [ThreadPool]: On list_nike_dw_dbt_dev: Close
+[0m10:01:05.030428 [debug] [MainThread]: Using postgres connection "master"
+[0m10:01:05.031100 [debug] [MainThread]: On master: BEGIN
+[0m10:01:05.031689 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:01:05.048551 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m10:01:05.049365 [debug] [MainThread]: Using postgres connection "master"
+[0m10:01:05.050002 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "nike_profile", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m10:01:05.063397 [debug] [MainThread]: SQL status: SELECT 1 in 0.0 seconds
+[0m10:01:05.064897 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '88a106cd-4fef-47bf-9832-4fa01f05293f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb8aa3fb290>]}
+[0m10:01:05.065661 [debug] [MainThread]: On master: ROLLBACK
+[0m10:01:05.066463 [debug] [MainThread]: Using postgres connection "master"
+[0m10:01:05.067090 [debug] [MainThread]: On master: BEGIN
+[0m10:01:05.067993 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m10:01:05.068619 [debug] [MainThread]: On master: COMMIT
+[0m10:01:05.069219 [debug] [MainThread]: Using postgres connection "master"
+[0m10:01:05.069813 [debug] [MainThread]: On master: COMMIT
+[0m10:01:05.070552 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m10:01:05.071302 [debug] [MainThread]: On master: Close
+[0m10:01:05.072121 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m10:01:05.072886 [info ] [MainThread]: 
+[0m10:01:05.081210 [debug] [Thread-1 (]: Began running node test.nike_project.accepted_values_stg_nike_global_gender__MEN__WOMEN__UNISEX__KIDS__OTHER.35af185cae
+[0m10:01:05.081611 [debug] [Thread-2 (]: Began running node test.nike_project.not_null_stg_nike_global_effective_price_local.903da08d30
+[0m10:01:05.081942 [debug] [Thread-3 (]: Began running node test.nike_project.not_null_stg_nike_global_nike_id.e976fd5127
+[0m10:01:05.082276 [debug] [Thread-4 (]: Began running node test.nike_project.unique_stg_nike_global_nike_id.bc47627dcf
+[0m10:01:05.082839 [info ] [Thread-1 (]: 1 of 4 START test accepted_values_stg_nike_global_gender__MEN__WOMEN__UNISEX__KIDS__OTHER  [RUN]
+[0m10:01:05.083917 [info ] [Thread-2 (]: 2 of 4 START test not_null_stg_nike_global_effective_price_local ............... [RUN]
+[0m10:01:05.084760 [info ] [Thread-3 (]: 3 of 4 START test not_null_stg_nike_global_nike_id ............................. [RUN]
+[0m10:01:05.085683 [info ] [Thread-4 (]: 4 of 4 START test unique_stg_nike_global_nike_id ............................... [RUN]
+[0m10:01:05.086671 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_nike_dw_dbt_dev, now test.nike_project.accepted_values_stg_nike_global_gender__MEN__WOMEN__UNISEX__KIDS__OTHER.35af185cae)
+[0m10:01:05.087588 [debug] [Thread-2 (]: Acquiring new postgres connection 'test.nike_project.not_null_stg_nike_global_effective_price_local.903da08d30'
+[0m10:01:05.088616 [debug] [Thread-3 (]: Acquiring new postgres connection 'test.nike_project.not_null_stg_nike_global_nike_id.e976fd5127'
+[0m10:01:05.089655 [debug] [Thread-4 (]: Acquiring new postgres connection 'test.nike_project.unique_stg_nike_global_nike_id.bc47627dcf'
+[0m10:01:05.090446 [debug] [Thread-1 (]: Began compiling node test.nike_project.accepted_values_stg_nike_global_gender__MEN__WOMEN__UNISEX__KIDS__OTHER.35af185cae
+[0m10:01:05.091311 [debug] [Thread-2 (]: Began compiling node test.nike_project.not_null_stg_nike_global_effective_price_local.903da08d30
+[0m10:01:05.092017 [debug] [Thread-3 (]: Began compiling node test.nike_project.not_null_stg_nike_global_nike_id.e976fd5127
+[0m10:01:05.092904 [debug] [Thread-4 (]: Began compiling node test.nike_project.unique_stg_nike_global_nike_id.bc47627dcf
+[0m10:01:05.107209 [debug] [Thread-1 (]: Writing injected SQL for node "test.nike_project.accepted_values_stg_nike_global_gender__MEN__WOMEN__UNISEX__KIDS__OTHER.35af185cae"
+[0m10:01:05.114177 [debug] [Thread-2 (]: Writing injected SQL for node "test.nike_project.not_null_stg_nike_global_effective_price_local.903da08d30"
+[0m10:01:05.117996 [debug] [Thread-3 (]: Writing injected SQL for node "test.nike_project.not_null_stg_nike_global_nike_id.e976fd5127"
+[0m10:01:05.123742 [debug] [Thread-4 (]: Writing injected SQL for node "test.nike_project.unique_stg_nike_global_nike_id.bc47627dcf"
+[0m10:01:05.130353 [debug] [Thread-1 (]: Began executing node test.nike_project.accepted_values_stg_nike_global_gender__MEN__WOMEN__UNISEX__KIDS__OTHER.35af185cae
+[0m10:01:05.141789 [debug] [Thread-4 (]: Began executing node test.nike_project.unique_stg_nike_global_nike_id.bc47627dcf
+[0m10:01:05.142750 [debug] [Thread-1 (]: Writing runtime sql for node "test.nike_project.accepted_values_stg_nike_global_gender__MEN__WOMEN__UNISEX__KIDS__OTHER.35af185cae"
+[0m10:01:05.145175 [debug] [Thread-4 (]: Writing runtime sql for node "test.nike_project.unique_stg_nike_global_nike_id.bc47627dcf"
+[0m10:01:05.145520 [debug] [Thread-3 (]: Began executing node test.nike_project.not_null_stg_nike_global_nike_id.e976fd5127
+[0m10:01:05.145783 [debug] [Thread-2 (]: Began executing node test.nike_project.not_null_stg_nike_global_effective_price_local.903da08d30
+[0m10:01:05.149004 [debug] [Thread-3 (]: Writing runtime sql for node "test.nike_project.not_null_stg_nike_global_nike_id.e976fd5127"
+[0m10:01:05.151423 [debug] [Thread-2 (]: Writing runtime sql for node "test.nike_project.not_null_stg_nike_global_effective_price_local.903da08d30"
+[0m10:01:05.156032 [debug] [Thread-1 (]: Using postgres connection "test.nike_project.accepted_values_stg_nike_global_gender__MEN__WOMEN__UNISEX__KIDS__OTHER.35af185cae"
+[0m10:01:05.156990 [debug] [Thread-1 (]: On test.nike_project.accepted_values_stg_nike_global_gender__MEN__WOMEN__UNISEX__KIDS__OTHER.35af185cae: BEGIN
+[0m10:01:05.157432 [debug] [Thread-4 (]: Using postgres connection "test.nike_project.unique_stg_nike_global_nike_id.bc47627dcf"
+[0m10:01:05.158253 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m10:01:05.158650 [debug] [Thread-3 (]: Using postgres connection "test.nike_project.not_null_stg_nike_global_nike_id.e976fd5127"
+[0m10:01:05.159703 [debug] [Thread-4 (]: On test.nike_project.unique_stg_nike_global_nike_id.bc47627dcf: BEGIN
+[0m10:01:05.160205 [debug] [Thread-2 (]: Using postgres connection "test.nike_project.not_null_stg_nike_global_effective_price_local.903da08d30"
+[0m10:01:05.161567 [debug] [Thread-3 (]: On test.nike_project.not_null_stg_nike_global_nike_id.e976fd5127: BEGIN
+[0m10:01:05.163797 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m10:01:05.164884 [debug] [Thread-2 (]: On test.nike_project.not_null_stg_nike_global_effective_price_local.903da08d30: BEGIN
+[0m10:01:05.165805 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m10:01:05.167781 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m10:01:05.182148 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m10:01:05.182960 [debug] [Thread-1 (]: Using postgres connection "test.nike_project.accepted_values_stg_nike_global_gender__MEN__WOMEN__UNISEX__KIDS__OTHER.35af185cae"
+[0m10:01:05.183730 [debug] [Thread-1 (]: On test.nike_project.accepted_values_stg_nike_global_gender__MEN__WOMEN__UNISEX__KIDS__OTHER.35af185cae: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "nike_profile", "target_name": "dev", "node_id": "test.nike_project.accepted_values_stg_nike_global_gender__MEN__WOMEN__UNISEX__KIDS__OTHER.35af185cae"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        gender as value_field,
+        count(*) as n_records
+
+    from "nike_dw"."dbt_dev"."stg_nike_global"
+    group by gender
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'MEN','WOMEN','UNISEX','KIDS','OTHER'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m10:01:05.185869 [debug] [Thread-4 (]: SQL status: BEGIN in 0.0 seconds
+[0m10:01:05.186259 [debug] [Thread-3 (]: SQL status: BEGIN in 0.0 seconds
+[0m10:01:05.186899 [debug] [Thread-4 (]: Using postgres connection "test.nike_project.unique_stg_nike_global_nike_id.bc47627dcf"
+[0m10:01:05.187175 [debug] [Thread-2 (]: SQL status: BEGIN in 0.0 seconds
+[0m10:01:05.187872 [debug] [Thread-3 (]: Using postgres connection "test.nike_project.not_null_stg_nike_global_nike_id.e976fd5127"
+[0m10:01:05.188561 [debug] [Thread-4 (]: On test.nike_project.unique_stg_nike_global_nike_id.bc47627dcf: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "nike_profile", "target_name": "dev", "node_id": "test.nike_project.unique_stg_nike_global_nike_id.bc47627dcf"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    nike_id as unique_field,
+    count(*) as n_records
+
+from "nike_dw"."dbt_dev"."stg_nike_global"
+where nike_id is not null
+group by nike_id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m10:01:05.189240 [debug] [Thread-2 (]: Using postgres connection "test.nike_project.not_null_stg_nike_global_effective_price_local.903da08d30"
+[0m10:01:05.189895 [debug] [Thread-3 (]: On test.nike_project.not_null_stg_nike_global_nike_id.e976fd5127: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "nike_profile", "target_name": "dev", "node_id": "test.nike_project.not_null_stg_nike_global_nike_id.e976fd5127"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select nike_id
+from "nike_dw"."dbt_dev"."stg_nike_global"
+where nike_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m10:01:05.191046 [debug] [Thread-2 (]: On test.nike_project.not_null_stg_nike_global_effective_price_local.903da08d30: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "nike_profile", "target_name": "dev", "node_id": "test.nike_project.not_null_stg_nike_global_effective_price_local.903da08d30"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select effective_price_local
+from "nike_dw"."dbt_dev"."stg_nike_global"
+where effective_price_local is null
+
+
+
+      
+    ) dbt_internal_test
+[0m10:01:24.179842 [debug] [Thread-2 (]: SQL status: SELECT 1 in 19.0 seconds
+[0m10:01:24.183730 [debug] [Thread-2 (]: On test.nike_project.not_null_stg_nike_global_effective_price_local.903da08d30: ROLLBACK
+[0m10:01:24.184825 [debug] [Thread-2 (]: On test.nike_project.not_null_stg_nike_global_effective_price_local.903da08d30: Close
+[0m10:01:24.185919 [info ] [Thread-2 (]: 2 of 4 PASS not_null_stg_nike_global_effective_price_local ..................... [[32mPASS[0m in 19.10s]
+[0m10:01:24.187069 [debug] [Thread-2 (]: Finished running node test.nike_project.not_null_stg_nike_global_effective_price_local.903da08d30
+[0m10:01:25.502771 [debug] [Thread-3 (]: SQL status: SELECT 1 in 20.0 seconds
+[0m10:01:25.504599 [debug] [Thread-3 (]: On test.nike_project.not_null_stg_nike_global_nike_id.e976fd5127: ROLLBACK
+[0m10:01:25.505617 [debug] [Thread-3 (]: On test.nike_project.not_null_stg_nike_global_nike_id.e976fd5127: Close
+[0m10:01:25.506633 [info ] [Thread-3 (]: 3 of 4 PASS not_null_stg_nike_global_nike_id ................................... [[32mPASS[0m in 20.42s]
+[0m10:01:25.507836 [debug] [Thread-3 (]: Finished running node test.nike_project.not_null_stg_nike_global_nike_id.e976fd5127
+[0m10:01:28.039633 [debug] [Thread-1 (]: SQL status: SELECT 1 in 23.0 seconds
+[0m10:01:28.041487 [debug] [Thread-1 (]: On test.nike_project.accepted_values_stg_nike_global_gender__MEN__WOMEN__UNISEX__KIDS__OTHER.35af185cae: ROLLBACK
+[0m10:01:28.042379 [debug] [Thread-1 (]: On test.nike_project.accepted_values_stg_nike_global_gender__MEN__WOMEN__UNISEX__KIDS__OTHER.35af185cae: Close
+[0m10:01:28.043377 [info ] [Thread-1 (]: 1 of 4 PASS accepted_values_stg_nike_global_gender__MEN__WOMEN__UNISEX__KIDS__OTHER  [[32mPASS[0m in 22.96s]
+[0m10:01:28.044332 [debug] [Thread-1 (]: Finished running node test.nike_project.accepted_values_stg_nike_global_gender__MEN__WOMEN__UNISEX__KIDS__OTHER.35af185cae
+[0m10:01:32.044838 [debug] [Thread-4 (]: SQL status: SELECT 1 in 27.0 seconds
+[0m10:01:32.046699 [debug] [Thread-4 (]: On test.nike_project.unique_stg_nike_global_nike_id.bc47627dcf: ROLLBACK
+[0m10:01:32.047700 [debug] [Thread-4 (]: On test.nike_project.unique_stg_nike_global_nike_id.bc47627dcf: Close
+[0m10:01:32.048671 [info ] [Thread-4 (]: 4 of 4 PASS unique_stg_nike_global_nike_id ..................................... [[32mPASS[0m in 26.96s]
+[0m10:01:32.049759 [debug] [Thread-4 (]: Finished running node test.nike_project.unique_stg_nike_global_nike_id.bc47627dcf
+[0m10:01:32.051924 [debug] [MainThread]: Using postgres connection "master"
+[0m10:01:32.052599 [debug] [MainThread]: On master: BEGIN
+[0m10:01:32.053215 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m10:01:32.070648 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m10:01:32.071470 [debug] [MainThread]: On master: COMMIT
+[0m10:01:32.072094 [debug] [MainThread]: Using postgres connection "master"
+[0m10:01:32.072738 [debug] [MainThread]: On master: COMMIT
+[0m10:01:32.073594 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m10:01:32.074191 [debug] [MainThread]: On master: Close
+[0m10:01:32.075051 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:01:32.075823 [debug] [MainThread]: Connection 'test.nike_project.accepted_values_stg_nike_global_gender__MEN__WOMEN__UNISEX__KIDS__OTHER.35af185cae' was properly closed.
+[0m10:01:32.076446 [debug] [MainThread]: Connection 'test.nike_project.not_null_stg_nike_global_effective_price_local.903da08d30' was properly closed.
+[0m10:01:32.077064 [debug] [MainThread]: Connection 'test.nike_project.not_null_stg_nike_global_nike_id.e976fd5127' was properly closed.
+[0m10:01:32.077844 [debug] [MainThread]: Connection 'test.nike_project.unique_stg_nike_global_nike_id.bc47627dcf' was properly closed.
+[0m10:01:32.078629 [info ] [MainThread]: 
+[0m10:01:32.079373 [info ] [MainThread]: Finished running 4 data tests in 0 hours 0 minutes and 27.13 seconds (27.13s).
+[0m10:01:32.080842 [debug] [MainThread]: Command end result
+[0m10:01:32.123002 [info ] [MainThread]: 
+[0m10:01:32.123962 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m10:01:32.124791 [info ] [MainThread]: 
+[0m10:01:32.125545 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 TOTAL=4
+[0m10:01:32.126769 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 28.320139, "process_user_time": 1.425637, "process_kernel_time": 0.398521, "process_mem_max_rss": "115904", "process_in_blocks": "2064", "process_out_blocks": "1272"}
+[0m10:01:32.127593 [debug] [MainThread]: Command `dbt test` succeeded at 10:01:32.127504 after 28.32 seconds
+[0m10:01:32.128296 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb8a8ea2a10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb8a8da9a90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb8accec710>]}
+[0m10:01:32.129034 [debug] [MainThread]: Flushing usage events

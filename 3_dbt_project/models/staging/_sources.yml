@@ -1,0 +1,7 @@
+version: 2
+
+sources:
+  - name: raw_nike
+    schema: raw
+    tables:
+      - name: global_nike

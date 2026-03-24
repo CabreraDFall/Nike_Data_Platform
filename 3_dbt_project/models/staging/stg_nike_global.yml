@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: stg_nike_global
+    description: "Staging model for Nike global data with deduplication and price correction."
+    columns:
+      - name: nike_id
+        description: "Surrogate key (snapshot_date + country + sku)"
+        data_tests:
+          - unique
+          - not_null
+
+      - name: effective_price_local
+        description: "The minimum between price and sale_price to avoid incorrect discounting."
+        data_tests:
+          - not_null
+
+      - name: gender
+        description: "Normalized gender segment (MEN, WOMEN, UNISEX, KIDS, OTHER)."
+        data_tests:
+          - accepted_values:
+              values: ['MEN', 'WOMEN', 'UNISEX', 'KIDS', 'OTHER']
