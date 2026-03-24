@@ -176,6 +176,28 @@ services:
     networks:
       - nike_network
 
+  # 10. Dashboard (Exploration & Visuals)
+  dashboard:
+    image: python:3.11-slim
+    container_name: nike_dashboard
+    working_dir: /app
+    volumes:
+      - ../4_dashboard:/app
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_HOST: nike_postgres
+    command: >
+      sh -c "pip install streamlit psycopg2-binary pandas plotly && streamlit run app.py --server.port 8501 --server.address 0.0.0.0"
+    ports:
+      - "8501:8501"
+    networks:
+      - nike_network
+    depends_on:
+      nike_postgres:
+        condition: service_healthy
+
 networks:
   nike_network:
     driver: bridge

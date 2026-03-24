@@ -1,6 +1,6 @@
-# Nike Data Platform: End-to-End Price Monitoring System 🚀
+# Nike Data Platform: End-to-End Price Monitoring System
 
-## 🎯 1. Problem Statement & Objective
+## 1. Problem Statement & Objective
 
 Nike's global distribution involves managing thousands of SKUs across multiple markets, each with its own currency, pricing strategy, and seasonal discounts. **The core challenge** for the business was the lack of a centralized, clean, and reliable data source for global price monitoring. 
 
@@ -10,24 +10,24 @@ Prior to this project, the data was fragmented across 46 weekly snapshots, conta
 
 **The Objective**: To build an automated data platform that ingests, cleans, and transforms raw market snapshots into a validated **Dimensional Model (Star Schema)**, enabling clear visibility into price trends and discount performance worldwide.
 
-## 🏗️ 2. Architecture & Tech Stack
+## 2. Architecture & Tech Stack
 
 This project implements a **Modern Data Stack** entirely containerized with Docker:
 
-* **Infrastructure (IaC):** Docker & Docker Compose for reproducibility.
-* **Workflow Orchestration:** [Apache Airflow](https://airflow.apache.org/) (Automated ingestion from CSV to Postgres).
-* **Data Warehouse:** [PostgreSQL](https://www.postgresql.org/) (Split into `raw`, `dbt_dev` and `marts` schemas).
-* **Transformation Layer:** [dbt (Postgres)](https://www.getdbt.com/) with 14+ automated DQ tests.
+* **Infrastructure (IaC):** [Terraform](https://www.terraform.io/) for GCP (GCS Bucket & BigQuery Dataset) + Docker for local orchestration.
+* **Workflow Orchestration:** [Apache Airflow](https://airflow.apache.org/) (Automated ingestion from Local -> GCS -> BigQuery).
+* **Data Warehouse:** [Google BigQuery](https://cloud.google.com/bigquery) (Production target) and PostgreSQL (Local dev).
+* **Transformation Layer:** [dbt (BigQuery)](https://www.getdbt.com/) with 14+ automated DQ tests and Star Schema design.
 * **Graphical Discovery:** dbt Docs (built-in lineage graph for data traceability).
 
-## 📂 3. Project Structure
+## 3. Project Structure
 
 * `0_data/`: Raw CSV files (not pushed to GitHub).
 * `1_infrastructure/`: Docker (DB, Airflow, Jupyter), DAGs and environment config.
 * `2_EDA/`: Exploratory Data Analysis & DBT Readiness notebooks.
 * `3_dbt_project/`: dbt models, tests, and snapshots.
 
-## 🚀 4. How to Run
+## 4. How to Run
 
 ### 1. Start Infrastructure
 
@@ -49,7 +49,18 @@ docker compose up -d
 * Start the docs server: `docker compose up -d dbt_docs`
 * Access the UI at: **`http://localhost:8082`** (Click the "Lineage Graph" icon).
 
-## 🔍 5. Data Quality & Testing
+### 4. Analytical Dashboard
+
+* Access the Streamlit dashboard at: **`http://localhost:8501`**
+* The dashboard implements 5 high-impact analytical visualizations:
+    1.  **Categorical Analysis**: Average Price by Category and Gender.
+    2.  **Temporal Trends**: Historical price evolution (Area Chart).
+    3.  **Statistical Distribution**: Box Plots showing price spread and outliers.
+    4.  **Product Ranking**: Top 10 most premium SKUs by price.
+    5.  **Global Comparison**: Market-by-market price benchmarks.
+* **Automated Insights**: 5 key business findings generated directly from the live data.
+
+## 5. Data Quality & Testing
 
 This project prioritizes data reliability. We have implemented **14+ automated data tests** including:
 
@@ -58,7 +69,7 @@ This project prioritizes data reliability. We have implemented **14+ automated d
 * **Accepted Values**: Gender segments are strictly validated against (MEN, WOMEN, UNISEX, KIDS, OTHER).
 * **Price Logic**: Validating that no effective price is null or negative.
 
-## 🧪 6. Data Warehouse Optimization
+## 6. Data Warehouse Optimization
 
 To secure a high-performance analytical layer, we implemented several optimization techniques at the DWH level:
 
@@ -70,6 +81,5 @@ To secure a high-performance analytical layer, we implemented several optimizati
 In our local Postgres DWH, we implemented **B-tree Indexing** to optimize the Star Schema:
 *   **Fact Table**: `fct_daily_prices` is indexed by `date_day`, `product_key`, and `geography_key` to accelerate time-series analysis and joins.
 *   **Dimensions**: `dim_product` and `dim_geography` use **Unique Indexes** on their surrogate keys to ensure sub-millisecond lookups.
-
-### Partitioning Strategy (Production Recommendation)
-While currently running on a single-node Postgres instance, for a production scale (e.g., Google BigQuery or AWS Redshift), the fact table would be **Partitioned by Day** (`date_day`) and **Clustered by SKU** (`product_key`). This would drastically reduce the slot-seconds cost and data scan volume for temporal price monitoring.
+* **Partitioning by Day** (`date_day`): This allows BigQuery to scan only the relevant shards for temporal price monitoring queries, reducing slot usage and cost.
+* **Clustering by SKU & Geography** (`product_key`, `geography_key`): This physically co-locates rows by product and region, accelerating joins between the fact table and dimensions.

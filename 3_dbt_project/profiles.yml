@@ -9,4 +9,14 @@ nike_profile:
       dbname: "{{ env_var('DBT_ENV_CUSTOM_ENV_DB') }}"
       schema: dbt_dev
       threads: 4
+    prod:
+      type: bigquery
+      method: service-account
+      project: "{{ env_var('GCP_PROJECT_ID') }}"
+      dataset: "{{ env_var('GCP_BQ_DATASET') }}"
+      threads: 4
+      keyfile: /opt/airflow/gcp_service_account.json
+      location: US
+      priority: interactive
+      retries: 1
   target: dev

@@ -6,7 +6,13 @@
       {'columns': ['date_day'], 'type': 'btree'},
       {'columns': ['product_key'], 'type': 'btree'},
       {'columns': ['geography_key'], 'type': 'btree'}
-    ]
+    ],
+    partition_by={
+      "field": "date_day",
+      "data_type": "date",
+      "granularity": "day"
+    },
+    cluster_by=["product_key", "geography_key"]
 ) }}
 
 with staging as (
