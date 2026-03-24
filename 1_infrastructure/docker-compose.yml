@@ -149,6 +149,25 @@ services:
     networks:
       - nike_network
 
+  # 9. dbt Documentation (Graphical Lineage)
+  dbt_docs:
+    image: ghcr.io/dbt-labs/dbt-postgres:1.8.2
+    container_name: nike_dbt_docs
+    working_dir: /usr/app
+    ports:
+      - "8082:8080"
+    volumes:
+      - ../3_dbt_project:/usr/app
+      - ../3_dbt_project/profiles.yml:/root/.dbt/profiles.yml
+    environment:
+      DBT_ENV_CUSTOM_ENV_USER: ${POSTGRES_USER}
+      DBT_ENV_CUSTOM_ENV_PASS: ${POSTGRES_PASSWORD}
+      DBT_ENV_CUSTOM_ENV_DB: ${POSTGRES_DB}
+      DBT_ENV_CUSTOM_ENV_HOST: nike_postgres
+    command: ["docs", "serve", "--port", "8080", "--host", "0.0.0.0"]
+    networks:
+      - nike_network
+
 networks:
   nike_network:
     driver: bridge

@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: dim_product
+    description: "Unique products dimension based on SKU."
+    columns:
+      - name: product_key
+        data_tests:
+          - unique
+          - not_null
+
+  - name: dim_geography
+    description: "Geographic dimension based on country code."
+    columns:
+      - name: geography_key
+        data_tests:
+          - unique
+          - not_null
+
+  - name: fct_daily_prices
+    description: "Fact table for daily price snapshots at (Market, Date, SKU) grain."
+    columns:
+      - name: fact_key
+        data_tests:
+          - unique
+          - not_null
+      - name: product_key
+        data_tests:
+          - not_null
+          - relationships:
+              to: ref('dim_product')
+              field: product_key
+      - name: geography_key
+        data_tests:
+          - not_null
+          - relationships:
+              to: ref('dim_geography')
+              field: geography_key
