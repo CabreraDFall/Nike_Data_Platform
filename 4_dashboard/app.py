@@ -121,8 +121,10 @@ try:
             labels={'date_day': 'Date', 'effective_price_usd': 'Avg Price (USD)'},
             template='plotly_dark',
             height=400,
-            title="Global Average Price Evolution (USD)"
+            title="Global Average Price Evolution (USD)",
+            markers=True
         )
+        fig_time.update_traces(mode='lines+markers')
         st.plotly_chart(fig_time, use_container_width=True)
         st.markdown("---")
 
