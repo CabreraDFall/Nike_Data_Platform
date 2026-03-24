@@ -119,6 +119,20 @@ services:
     networks:
       - nike_network
 
+  # 7. Jupyter + PySpark (Análisis Avanzado)
+  jupyter:
+    image: jupyter/pyspark-notebook:latest
+    container_name: nike_jupyter
+    ports:
+      - "8888:8888"
+    volumes:
+      - ../2_EDA/notebooks:/home/jovyan/work
+      - ../0_data:/home/jovyan/0_data
+    environment:
+      JUPYTER_TOKEN: ${JUPYTER_TOKEN}
+    networks:
+      - nike_network
+
 networks:
   nike_network:
     driver: bridge
